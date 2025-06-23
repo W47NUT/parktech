@@ -12,20 +12,26 @@
         <span class="text-[#00f0c0]">&gt;&nbsp;&nbsp;</span> Why do our clients choose us?
       </h1>
     </div>
-  </div> 
-  <div class=" grid grid-flow-col grid-rows-3 gap-4 border border-white shadow-lg">
-    <div class="row-span-3">
-      <img class="mx-auto h-64 w-64" src={servers} alt="server cluster" />
-    </div>
-    <div class="col-span-2 my-auto pt-2 font-bold underline underline-offset-4">
-      Managed IT
-    </div>
-    <div class="col-span-2 row-span-2 font-semibold">
-      All-in-one IT support, monitoring, and maintenance. We handle every
-      device, system, and user so you can focus on business.
+  </div>
+  
+  <div class="inset-0 rounded-lg">
+    <div>
+      <div class=" grid grid-flow-col grid-rows-3 gap-4 bg-[#181c27] border border-[#3a3f5e] glow relative overflow-hidden rounded-lg">
+        <div class="row-span-3">
+          <img class="mx-auto h-64 w-64" src={servers} alt="server cluster" />
+        </div>
+        <div class="col-span-2 my-auto pt-2 font-bold underline underline-offset-4">
+          Managed IT
+        </div>
+        <div class="col-span-2 row-span-2 font-semibold">
+          All-in-one IT support, monitoring, and maintenance. We handle every
+          device, system, and user so you can focus on business.
+        </div>
+      </div>
     </div>
   </div>
-  <div class="grid grid-flow-col grid-rows-3 gap-4 border shadow-lg">
+
+  <div class="grid grid-flow-col grid-rows-3 gap-4 border border-white shadow-lg">
     <div
       class="col-span-2 my-auto text-right font-bold underline underline-offset-4"
     >

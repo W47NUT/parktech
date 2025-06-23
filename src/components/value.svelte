@@ -10,7 +10,7 @@
   </div>
   <div class="flex items-stretch gap-8">
     <div class="flex flex-col relative w-full">
-      <div class="bg-[#00f0c0]/20 absolute inset-0 rounded-lg blur-xl"></div>
+      <div class="bg-[#00f0c0]/20 inset-0 rounded-lg"></div>
       <div
         class="h-full glow relative overflow-hidden rounded-lg border border-[#3a3f5e] bg-[#181c27]"
       >
@@ -28,7 +28,7 @@
       </div>
     </div>
         <div class="flex flex-col relative w-full">
-      <div class="bg-[#00f0c0]/20 absolute inset-0 rounded-lg blur-xl"></div>
+      <div class="bg-[#00f0c0]/20 absolute inset-0 rounded-lg"></div>
       <div
         class="h-full glow relative overflow-hidden rounded-lg border border-[#3a3f5e] bg-[#181c27]"
       >
@@ -46,7 +46,7 @@
       </div>
     </div>
       <div class="flex flex-col relative w-full">
-      <div class="bg-[#00f0c0]/20 absolute inset-0 rounded-lg blur-xl"></div>
+      <div class="bg-[#00f0c0]/20 absolute inset-0 rounded-lg"></div>
       <div
         class="h-full glow relative overflow-hidden rounded-lg border border-[#3a3f5e] bg-[#181c27]"
       >
