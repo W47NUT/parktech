@@ -1,16 +1,88 @@
 @import "tailwindcss";
 
-.special-gothic-expanded-one-regular {
-  font-family: "Special Gothic Expanded One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+html,
+body {
+  background: #0a0c12;
+  font-family: system-ui;
+  margin: 0;
+  padding: 0;
 }
 
-body {
-  background-image: url("/src/assets/background.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-  min-height: 100vh;
+.cyber-grid {
+  background-image: linear-gradient(
+      rgba(0, 240, 192, 0.05) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(0, 240, 192, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+.cyber-glitch {
+  position: relative;
+  display: inline-block;
+}
+.cyber-glitch::before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 #ff2a6d;
+  top: 0;
+  color: #fff;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: glitch-anim 2s infinite linear alternate-reverse;
+}
+@keyframes glitch-anim {
+  0% {
+    clip: rect(36px, 9999px, 40px, 0);
+  }
+  20% {
+    clip: rect(39px, 9999px, 15px, 0);
+  }
+  40% {
+    clip: rect(35px, 9999px, 42px, 0);
+  }
+  60% {
+    clip: rect(48px, 9999px, 94px, 0);
+  }
+  80% {
+    clip: rect(3px, 9999px, 48px, 0);
+  }
+  100% {
+    clip: rect(0, 0, 0, 0);
+  }
+}
+.scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: rgba(0, 240, 192, 0.1);
+  opacity: 0.75;
+  animation: scanline 5s linear infinite;
+}
+.noise {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  pointer-events: none;
+}
+.glow {
+  box-shadow: 0 0 15px rgba(0, 240, 192, 0.5);
+}
+.glow-text {
+  text-shadow: 0 0 8px rgba(0, 240, 192, 0.5);
+}
+.glow-alt {
+  box-shadow: 0 0 15px rgba(255, 42, 109, 0.5);
+}
+.gradient-text {
+  background: linear-gradient(to right, #00f0c0, #ff2a6d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }

@@ -27,7 +27,7 @@
      inkscape:clip-to-page="false"
      inkscape:zoom="5.6806913"
      inkscape:cx="41.720274"
-     inkscape:cy="46.737269"
+     inkscape:cy="46.561235"
      inkscape:window-width="1290"
      inkscape:window-height="1022"
      inkscape:window-x="0"
@@ -159,10 +159,10 @@
      inkscape:label="Logo"
      style="display:inline"
      transform="translate(-3.7472643,-4.7812431)"><path
-       style="fill:#ea4d4d;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-opacity:1"
+       style="fill:#ff2a6d;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-opacity:1"
        d="m 3.7760022,4.7812431 c 0,0.2708183 0,0.2708183 0,0.2708183 L 3.9739596,5.2499518 V 4.7812431 5.2499518 4.7812431 Z"
        id="path37"
        inkscape:label="Blue tick" /><path
-       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-opacity:1"
+       style="fill:#00f0c0;fill-opacity:1;stroke:none;stroke-width:0.0104167;stroke-opacity:1"
        d="m 4.1603359,4.9791583 c 0,0 0.2302775,1.5e-4 0.2302775,0.2084241 0,0.2082744 -0.2302775,0.2082744 -0.2302775,0.2082744 H 3.7760022 v 0.4583117 l 0.1979574,0.197876 v -0.468703 h 0.1863763 c 0,0 0.4281323,0.01058 0.4281323,-0.3957591 0,-0.4063393 -0.4281323,-0.4063393 -0.4281323,-0.4063393 H 4.057268 v 0.1979152 z"
        id="path39" /></g></svg>

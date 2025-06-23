@@ -33,7 +33,7 @@
     <nav class="mx-0 flex items-center justify-between">
       <a href="/" class="flex">
         <img src={logoUrl} class="h-6 w-6" alt="Logo" />
-        <h1 class="pl-6 font-semibold">Park Technologies</h1>
+        <h1 class="pl-6 font-semibold text-[#e0e7ff]">Park Technologies</h1>
       </a>
       <ul class="item-center flex space-x-6 px-4 py-2">
         {#each textLinks as { label, href }}
@@ -41,10 +41,10 @@
             <a
               aria-current={isCurrentPage(href)}
               class="rounded-sm px-3 py-1 font-semibold
+          text-[#e0e7ff]
           transition-colors
           duration-150
-          hover:bg-[#4deaea]
-          hover:text-white
+          hover:text-[#00f0c0]
           focus:outline-none"
               {href}
             >

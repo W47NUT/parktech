@@ -1,37 +1,131 @@
 ---
-// Component Imports
+import "../styles/global.css";
 import Navbar from '../components/navbar.svelte';
 import Hero from '../components/hero.svelte';
 import Value from '../components/value.svelte';
 import Services from '../components/services.svelte';
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-                <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-                <link rel="preconnect" href="https://fonts.googleapis.com">
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
-		<style>
-			html,
-			body {
-				font-family: system-ui;
-				margin: 0;
-			}
-			body {
-				padding: 2rem;
-			}
-		</style>
-	</head>
-        <body>
-                <Navbar />
-                <Hero />
-                <Value />
-                <Services />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cyber: {
+                bg: '#0a0c12',
+                component: '#181c27',
+                input: 'rgba(30, 35, 50, 0.6)',
+                accent: '#00f0c0',
+                accentAlt: '#ea4d4d',
+                text: '#e0e7ff',
+                secondary: '#a0aed0',
+                border: '#3a3f5e'
+              }
+            },
+            fontFamily: {
+              mono: ['Fira Code', 'monospace'],
+              display: ['Orbitron', 'sans-serif']
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'scanline': 'scanline 5s linear infinite',
+            },
+            keyframes: {
+              scanline: {
+                '0%': { transform: 'translateY(-100%)' },
+                '100%': { transform: 'translateY(100%)' }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <script>
+      // Simple particles effect
+      document.addEventListener('DOMContentLoaded', function() {
+        const particlesContainer = document.getElementById('particles');
+
+        for (let i = 0; i < 100; i++) {
+          const particle = document.createElement('div');
+
+          // Random position
+          const x = Math.random() * 100;
+          const y = Math.random() * 100;
+
+          // Random size
+          const size = Math.random() * 3 + 1;
+
+          // Random color (cyber-accent or cyber-accentAlt)
+          const color = Math.random() > 0.5 ? '#00f0c0' : '#ff2a6d';
+
+          // Random opacity
+          const opacity = Math.random() * 0.5 + 0.1;
+
+          // Random animation duration
+          const duration = Math.random() * 50 + 20;
+
+          particle.style.position = 'absolute';
+          particle.style.left = `${x}%`;
+          particle.style.top = `${y}%`;
+          particle.style.width = `${size}px`;
+          particle.style.height = `${size}px`;
+          particle.style.backgroundColor = color;
+          particle.style.borderRadius = '50%';
+          particle.style.opacity = opacity;
+          particle.style.boxShadow = `0 0 ${size * 2}px ${color}`;
+          particle.style.animation = `float ${duration}s infinite linear`;
+
+          particlesContainer.appendChild(particle);
+        }
+
+        // Add animation keyframes
+        const style = document.createElement('style');
+        style.textContent = `
+          @keyframes float {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px); }
+            50% { transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px); }
+            75% { transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px); }
+            100% { transform: translate(0, 0); }
+          }
+        `;
+        document.head.appendChild(style);
+
+        // Typewriter effect for terminal text
+        const typewriterElements = document.querySelectorAll('.typewriter');
+        typewriterElements.forEach(element => {
+          const text = element.textContent;
+          element.textContent = '';
+
+          let i = 0;
+          const interval = setInterval(() => {
+            if (i < text.length) {
+              element.textContent += text.charAt(i);
+              i++;
+            } else {
+              clearInterval(interval);
+            }
+          }, 100);
+        });
+      });
+    </script>
+  </head>
+  <body class="cyber-grid bg-[#0a0c12] antialiased overflow-x-hidden">
+    <div class="noise"></div>
+    <div class="scanline"></div>
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute inset-0 bg-gradient-to-b from-[#0a0c12]/0 via-[#0a0c12]/0 to-[#0a0c12]/80"></div>
+      <div id="particles" class="fixed top-0 left-0 w-screen h-screen pointer-events-none z-0"></div>
+    </div>
+    <Navbar />
+    <Hero />
+    <Value />
+    <Services />
+  </body>
 </html>

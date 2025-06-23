@@ -3,30 +3,65 @@
 </script>
 
 <div class="mx-auto max-w-7xl px-4">
-  <h1 class="pb-6 font-bold underline underline-offset-4">
-    Why do our clients choose us?
-  </h1>
-  <div class="grid grid-cols-3 gap-4 text-center">
-    <div class="border p-12">
-      <h2 class="pb-4 font-bold">Predictable, Transparent Pricing</h2>
-      <p>
-        No hidden fees or surprise bills. You know your IT costs up front, every
-        month.
-      </p>
+  <div class="inline-block bg-[#181c27]/30 backdrop-blur-sm px-3 py-1 rounded border border-[#3a3f5e]/50 text-[#a0aed0] mb-8">              
+    <h1 class="font-bold text-[#e0e7ff]">
+      <span class="text-[#00f0c0]">&gt;&nbsp;&nbsp;</span> Why do our clients choose us?
+    </h1>
+  </div>
+  <div class="flex items-stretch gap-8">
+    <div class="flex flex-col relative w-full">
+      <div class="bg-[#00f0c0]/20 absolute inset-0 rounded-lg blur-xl"></div>
+      <div
+        class="h-full glow relative overflow-hidden rounded-lg border border-[#3a3f5e] bg-[#181c27]"
+      >
+        <div
+          class="from-[#00f0c0] to-[#ff2a6d] absolute top-0 left-0 h-1 w-full bg-gradient-to-r"
+        ></div>
+        <div class="p-6">
+          <div class="mb-6 flex">
+            <h1 class="text-[#00f0c0] text-xl">
+              Predictable, Transparent Pricing
+            </h1>
+          </div>
+          <p class="text-[#e0e7ff] text-md">No hidden fees or surprise bills. You know your IT costs up front, every month.</p>
+        </div>
+      </div>
     </div>
-    <div class="border p-12">
-      <h2 class="pb-4 font-bold">Human Support, Real Relationships</h2>
-      <p>
-        Direct access to experts who know your business. Fast answers, proactive
-        care, clear communication.
-      </p>
+        <div class="flex flex-col relative w-full">
+      <div class="bg-[#00f0c0]/20 absolute inset-0 rounded-lg blur-xl"></div>
+      <div
+        class="h-full glow relative overflow-hidden rounded-lg border border-[#3a3f5e] bg-[#181c27]"
+      >
+        <div
+          class="from-[#00f0c0] to-[#ff2a6d] absolute top-0 left-0 h-1 w-full bg-gradient-to-r"
+        ></div>
+        <div class="p-6">
+          <div class="mb-6 flex">
+            <h1 class="text-[#00f0c0] text-xl">
+              Human Support, Real Relationships
+            </h1>
+          </div>
+          <p class="text-[#e0e7ff] text-md">Direct access to experts who know your business. Fast answers, proactive care, clear communication</p>
+        </div>
+      </div>
     </div>
-    <div class="border p-12">
-      <h2 class="pb-4 font-bold">Security and Continuity Built In</h2>
-      <p>
-        Business-class protection, compliance, and rapid recovery—without
-        complexity or jargon. Your data stays sage, your business keeps moving.
-      </p>
+      <div class="flex flex-col relative w-full">
+      <div class="bg-[#00f0c0]/20 absolute inset-0 rounded-lg blur-xl"></div>
+      <div
+        class="h-full glow relative overflow-hidden rounded-lg border border-[#3a3f5e] bg-[#181c27]"
+      >
+        <div
+          class="from-[#00f0c0] to-[#ff2a6d] absolute top-0 left-0 h-1 w-full bg-gradient-to-r"
+        ></div>
+        <div class="p-6">
+          <div class="mb-6 flex">
+            <h1 class="text-[#00f0c0] font-display text-xl">
+              Security and Continuity Built In
+            </h1>
+          </div>
+          <p class="text-[#e0e7ff] text-md">Business-grade protection, compliance, and rapid recovery- without complexity or jargon. Your data stays safe, your business keeps running</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
