@@ -4,6 +4,9 @@ import Navbar from '../components/navbar.svelte';
 import Hero from '../components/hero.svelte';
 import Value from '../components/value.svelte';
 import Services from '../components/services.svelte';
+import Stats from '../components/stats.svelte';
+import CTA from '../components/cta.svelte';
+import Footer from '../components/footer.svelte';
 ---
 
 <html lang="en">
@@ -117,8 +120,6 @@ import Services from '../components/services.svelte';
     </script>
   </head>
   <body class="cyber-grid bg-[#0a0c12] antialiased overflow-x-hidden">
-    <div class="noise"></div>
-    <div class="scanline"></div>
     <div class="absolute inset-0 pointer-events-none">
       <div class="absolute inset-0 bg-gradient-to-b from-[#0a0c12]/0 via-[#0a0c12]/0 to-[#0a0c12]/80"></div>
       <div id="particles" class="fixed top-0 left-0 w-screen h-screen pointer-events-none z-0"></div>
@@ -126,6 +127,9 @@ import Services from '../components/services.svelte';
     <Navbar />
     <Hero />
     <Value />
+    <Stats />
     <Services />
+    <CTA />
+    <Footer />
   </body>
 </html>

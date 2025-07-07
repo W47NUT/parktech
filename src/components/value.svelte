@@ -3,7 +3,7 @@
 </script>
 
 <div class="mx-auto max-w-7xl px-4">
-  <div class="inline-block bg-[#181c27]/30 backdrop-blur-sm px-3 py-1 rounded border border-[#3a3f5e]/50 text-[#a0aed0] mb-8">              
+        <div class="inline-block bg-[#181c27]/30 backdrop-blur-sm px-3 py-1 mb-6 rounded border border-[#3a3f5e]/50 text-[#a0aed0]">              
     <h1 class="font-bold text-[#e0e7ff]">
       <span class="text-[#00f0c0]">&gt;&nbsp;&nbsp;</span> Why do our clients choose us?
     </h1>
