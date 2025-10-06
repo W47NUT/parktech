@@ -23,7 +23,7 @@
               Predictable, Transparent Pricing
             </h1>
           </div>
-          <p class="text-[#e0e7ff] text-md">No hidden fees or surprise bills. You know your IT costs up front, every month.</p>
+          <p class="text-[#e0e7ff] text-md">No hidden fees or surprise bills. You know your IT costs up front, every month</p>
         </div>
       </div>
     </div>

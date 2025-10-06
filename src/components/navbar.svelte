@@ -5,7 +5,6 @@
   const textLinks: { label: string; href: string }[] = [
     { label: "Home", href: "/" },
     { label: "Services", href: "/services/" },
-    { label: "Blog", href: "/blog/" },
     { label: "Contact", href: "/contact/" },
   ];
 

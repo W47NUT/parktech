@@ -1,29 +1,28 @@
 ---
-// Component Imports
+import "../styles/global.css";
+import Particles from '../components/particles.svelte';
 import Navbar from '../components/navbar.svelte';
-import Hero from '../components/hero.astro';
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
+import Services from '../components/servicesExplained.svelte'
+import CTA from '../components/cta.svelte';
+import Footer from '../components/footer.svelte';
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<style>
-			html,
-			body {
-				font-family: system-ui;
-				margin: 0;
-			}
-			body {
-				padding: 2rem;
-			}
-		</style>
-	</head>
-        <body>
-                <Navbar />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="cyber-grid bg-[#0a0c12] min-h-screen">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute inset-0 bg-gradient-to-b from-[#0a0c12]/0 via-[#0a0c12]/0 to-[#0a0c12]/80"></div>
+      <div id="particles" class="fixed top-0 left-0 w-screen h-screen pointer-events-none z-0"></div>
+    </div>
+    <Particles client:only />
+    <Navbar />
+    <Services />
+    <CTA />
+    <Footer />
+  </body>
 </html>

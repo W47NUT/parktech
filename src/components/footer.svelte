@@ -3,12 +3,12 @@
   import github from "../assets/github.svg?url";
 </script>
 
-<footer class="bg-[#0a0c12]">
+<footer class="relative">
   <div class="pt-16">
     <ul class="flex justify-center">
       <li>
         <a
-        href="https://github.com/W47NUT"
+        href="https://www.linkedin.com/in/jparktech/"
         >
           <img class="h-6 w-6" src={github} alt="Github Icon">
         </a>

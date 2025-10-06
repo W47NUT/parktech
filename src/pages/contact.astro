@@ -1,13 +1,10 @@
 ---
 import "../styles/global.css";
-import Navbar from '../components/navbar.svelte';
-import Hero from '../components/hero.svelte';
-import Value from '../components/value.svelte';
-import Services from '../components/services.svelte';
-import Stats from '../components/stats.svelte';
-import CTA from '../components/cta.svelte';
-import Footer from '../components/footer.svelte';
 import Particles from '../components/particles.svelte';
+import Navbar from '../components/navbar.svelte';
+import Footer from '../components/footer.svelte';
+import Contact from '../components/contact.svelte';
+import Privacy from '../components/privacy.svelte';
 ---
 
 <html lang="en">
@@ -24,11 +21,8 @@ import Particles from '../components/particles.svelte';
     </div>
     <Particles client:only />
     <Navbar />
-    <Hero />
-    <Value />
-    <Stats />
-    <Services />
-    <CTA />
+    <Contact />
+    <Privacy />
     <Footer />
   </body>
 </html>

@@ -22,7 +22,7 @@
           class="glow transform rounded bg-[#00f0c0] px-8 py-3 font-bold text-[#0a0c12] transition-all duration-300 hover:-translate-y-1 hover:bg-[#00f0c0]/90"
           >Get started</a
         >
-        <a href="#" class="text-sm/6 font-semibold text-[#ff2a6d]"
+        <a href="/services" class="text-sm/6 font-semibold text-[#ff2a6d]"
           >Learn more <span aria-hidden="true">→</span></a
         >
       </div>

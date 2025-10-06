@@ -16,9 +16,9 @@
         <dt class="text-[#e0e7ff]">Critical support tickets acknowledged within 15 minutes</dt>
         <dd class="order-first text-3xl font-semibold tracking-tight text-5xl">
           <span class="cyber-glitch text-[#e0e7ff] absolute left-0 top-0 w-full h-full pointer-events-none select-none"
-                data-text="15-Min Avg. Response"
+                data-text="15-Min Avg Response"
           >
-          15-Min Avg. Response
+          15-Min Avg Response
           </span>
         </dd>
       </div>

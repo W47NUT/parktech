@@ -28,7 +28,7 @@
         24/7 Proactive IT Management
       </div>
       <div class="px-16 col-span-2 row-span-2 font-semibold text-[#e0e7ff]">
-        We continuously monitor your entire IT environment—servers, workstations, network devices, and cloud services—around the clock. Automated patching, performance tuning, and a fully staffed help-desk ensure issues are detected and resolved before they disrupt your business. Outsource your IT burden and never worry about surprise downtime again.
+       We continuously monitor every server, workstation, router, and endpoint around the clock. Automatic patching, performance tuning, and real‑time alerts stop problems before they become outages. Plus, you get a single point of contact for any support request. Focus on growing your business, your IT is covered. 
       </div>
     </div>
   </div>
@@ -62,7 +62,7 @@
         Cloud Infrastructure & Support
       </div>
       <div class="px-16 col-span-2 row-span-2 font-semibold text-[#e0e7ff]">
-        Move to the cloud with confidence. We design, deploy, and manage scalable environments on Microsoft 365, AWS, Azure, or private/hybrid configurations. From seamless data migration to ongoing backup, security hardening, and cost optimization, our specialists deliver high performance and reliability that grows with your organization—without surprise bills or complexity.
+        Move to the cloud with confidence and give your team the power to work from anywhere with rock‑solid file sharing, company‑wide email and calendar access, and HD video meetings. We handle configuration, security, and scaling, so your documents sync instantly across desktop, mobile, and web. Your users stay connected whether online or offline, and you never lose a file. Focus on projects and clients, your cloud environment is in expert hands.
       </div>
     </div>
   </div>
