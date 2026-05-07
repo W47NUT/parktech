@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+/* Base document surface
+   Keep the site dark by default so unstyled flashes match the brand shell. */
 html {
   min-height: 100%;
   background: #0a0c12;
@@ -14,6 +16,9 @@ body {
   padding: 0;
 }
 
+/* Cyber grid background
+   The body receives .cyber-grid from BaseLayout. The pseudo-element is fixed so
+   all pages share one uninterrupted technical background. */
 .cyber-grid {
   position: relative;
   isolation: isolate;
@@ -33,12 +38,18 @@ body {
   background-size: 30px 30px;
 }
 
+/* Particle and stacking expectations
+   BaseLayout mounts the particle container behind main/footer content. Keep page
+   sections above the grid and particles with this z-index layer. */
 .cyber-grid > main,
 .cyber-grid > footer {
   position: relative;
   z-index: 10;
 }
 
+/* Section labels
+   Reusable compact tags for public page sections. Width and line-height choices
+   help labels wrap cleanly on narrow screens. */
 .section-tag {
   display: inline-flex;
   max-width: 100%;
@@ -64,6 +75,10 @@ body {
   min-width: 0;
   line-height: 1.15;
 }
+
+/* Glitch headline treatment
+   Used sparingly for ParkTech identity headlines. The mobile rule below disables
+   the overlay so long headings do not collide with wrapped text. */
 .cyber-glitch {
   position: relative;
   display: inline-block;
@@ -112,12 +127,16 @@ body {
   }
 }
 
+/* Motion safeguards */
 @media (prefers-reduced-motion: reduce) {
   .cyber-glitch::before,
   .scanline {
     animation: none;
   }
 }
+
+/* Optional atmospheric utilities
+   These are kept for existing dark-cyber styling and future reuse. */
 .scanline {
   position: absolute;
   top: 0;
@@ -138,6 +157,8 @@ body {
   opacity: 0.05;
   pointer-events: none;
 }
+
+/* Glow cards and accent text */
 .glow {
   box-shadow: 0 0 15px rgba(0, 240, 192, 0.5);
 }
@@ -154,6 +175,8 @@ body {
   color: transparent;
 }
 
+/* Homepage support grid
+   Stable card heights prevent the support list from jumping as labels wrap. */
 .support-help-grid {
   display: grid;
   height: 100%;
@@ -186,11 +209,15 @@ body {
   }
 }
 
+/* Mobile surface safeguards
+   Dark translucent cards can become too transparent over particles on phones.
+   These helper classes make mobile cards more solid without changing desktop. */
 .mobile-solid-surface,
 .mobile-solid-surface-dark {
   background-clip: padding-box;
 }
 
+/* Mobile grid behavior */
 @media (max-width: 640px) {
   .cyber-grid::before {
     background-image:

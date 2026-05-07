@@ -1,5 +1,7 @@
 <script lang="ts">
-  import "../styles/global.css";
+  // Homepage hero: brand, positioning line, and primary CTAs only. Keep future
+  // copy plain-English and practical so the first viewport does not overstate
+  // the offer.
 </script>
 
 <section class="relative isolate px-4 sm:px-6">

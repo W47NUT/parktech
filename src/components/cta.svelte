@@ -1,5 +1,6 @@
 <script lang="ts">
-  import "../styles/global.css";
+  // Shared homepage closing CTA. It uses email only; do not add scheduling,
+  // tracking, or a form backend without an explicit product decision.
 </script>
 
 <section class="relative mx-auto max-w-6xl px-4 py-16 sm:py-20">

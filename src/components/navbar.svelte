@@ -1,29 +1,30 @@
 <script lang="ts">
-  import "../styles/global.css";
   import logoUrl from "../assets/park-tech.svg?url";
 
-  const textLinks: { label: string; href: string }[] = [
+  export let currentPath = "/";
+
+  // Primary navigation is intentionally short for V2. Keep Services out of the
+  // main nav unless the site direction changes.
+  const navigationLinks: { label: string; href: string }[] = [
     { label: "Home", href: "/" },
     { label: "About", href: "/about/" },
     { label: "Contact", href: "/contact/" },
   ];
 
-  function isCurrentPage(href: string) {
-    if (typeof window === "undefined") return null; // SSR safety
-
-    let pathname = window.location.pathname.replace(
-      import.meta.env.BASE_URL,
-      ""
-    );
-
+  function normalizePath(pathname: string) {
     if (pathname.at(0) !== "/") pathname = `/${pathname}`;
-
     if (pathname.at(-1) !== "/") pathname = `${pathname}/`;
+
+    return pathname;
+  }
+
+  function isCurrentPage(href: string) {
+    const pathname = normalizePath(currentPath);
 
     if (pathname === href || (href !== "/" && pathname.startsWith(href)))
       return "page";
 
-    return null;
+    return undefined;
   }
 </script>
 
@@ -34,8 +35,8 @@
         <img src={logoUrl} class="h-7 w-7" alt="Park Technologies logo" />
         <h1 class="pl-4 font-semibold text-[#e0e7ff]">Park Technologies</h1>
       </a>
-      <ul class="item-center flex space-x-2 px-0 py-2 sm:space-x-6 sm:px-4">
-        {#each textLinks as { label, href }}
+      <ul class="flex items-center space-x-2 px-0 py-2 sm:space-x-6 sm:px-4">
+        {#each navigationLinks as { label, href }}
           <li>
             <a
               aria-current={isCurrentPage(href)}
@@ -44,8 +45,8 @@
           transition-colors
           duration-150
           hover:text-[#00f0c0]
-          aria-[current=page]:text-[#00f0c0]
-          focus:outline-none"
+          focus:outline-none
+          aria-[current=page]:text-[#00f0c0]"
               {href}
             >
               {label}

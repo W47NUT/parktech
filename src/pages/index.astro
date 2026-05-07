@@ -1,46 +1,17 @@
 ---
-import "../styles/global.css";
-import Navbar from "../components/navbar.svelte";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/hero.svelte";
 import Value from "../components/value.svelte";
 import Services from "../components/services.svelte";
 import CTA from "../components/cta.svelte";
-import Footer from "../components/footer.svelte";
-import Particles from "../components/particles.svelte";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Park Technologies | Practical IT Support for Small Offices</title>
-    <meta
-      name="description"
-      content="Practical IT support for small offices that need technology organized, documented, and easier to support."
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="cyber-grid min-h-screen bg-[#0a0c12]">
-    <div class="pointer-events-none absolute inset-0">
-      <div
-        class="absolute inset-0 bg-gradient-to-b from-[#0a0c12]/0 via-[#0a0c12]/0 to-[#0a0c12]/80"
-      >
-      </div>
-      <div
-        id="particles"
-        class="pointer-events-none fixed top-0 left-0 z-0 h-screen w-screen"
-      >
-      </div>
-    </div>
-    <Particles client:only="svelte" />
-    <Navbar />
-    <main class="relative z-10">
-      <Hero />
-      <Value />
-      <Services />
-      <CTA />
-    </main>
-    <Footer />
-  </body>
-</html>
+<BaseLayout
+  title="Park Technologies | Practical IT Support for Small Offices"
+  description="Practical IT support for small offices that need technology organized, documented, and easier to support."
+>
+  <Hero />
+  <Value />
+  <Services />
+  <CTA />
+</BaseLayout>

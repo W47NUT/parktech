@@ -1,6 +1,6 @@
 <script lang="ts">
-  import "../styles/global.css";
-
+  // Homepage support-area cards. These are public marketing copy, so keep them
+  // practical and avoid language that makes the service sound larger than it is.
   const supportAreas = [
     {
       title: "Daily support",
@@ -19,6 +19,7 @@
     },
   ];
 
+  // Checklist-style support items shown in the right-side card grid.
   const helpItems = [
     "Everyday computer and workstation support",
     "Microsoft 365 or Google Workspace basics",
@@ -31,6 +32,8 @@
     "Plain-English support notes and monthly summaries",
   ];
 
+  // Process cards explain how work is handled without creating a service-level
+  // promise or emergency-support expectation.
   const workingSteps = [
     {
       step: "01",
@@ -54,6 +57,7 @@
     },
   ];
 
+  // Guardrail copy for the client-owned systems principle.
   const ownershipPoints = [
     "Client-owned accounts whenever possible",
     "Named admin access instead of shared personal logins",
@@ -62,6 +66,7 @@
     "No raw passwords in documentation",
   ];
 
+  // Short trust signals. Keep these grounded in delivery style, not scale.
   const supportPoints = [
     "Direct point of contact",
     "Plain-English explanations",
@@ -209,7 +214,8 @@
     </h2>
     <p class="pt-5 text-[#e0e7ff]">
       Small offices often need accountable support that can listen carefully,
-      explain clearly, document what matters, and make practical recommendations.
+      explain clearly, document what matters, and make practical
+      recommendations.
     </p>
     <ul class="mt-6 space-y-3 text-[#e0e7ff]">
       {#each supportPoints as point}

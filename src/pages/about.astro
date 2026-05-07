@@ -1,9 +1,8 @@
 ---
-import "../styles/global.css";
-import Particles from "../components/particles.svelte";
-import Navbar from "../components/navbar.svelte";
-import Footer from "../components/footer.svelte";
+import BaseLayout from "../layouts/BaseLayout.astro";
 
+// These arrays render public About page copy. Keep edits practical and
+// V2-safe: no certification promises, emergency coverage claims, or resume-first copy.
 const focusAreas = [
   "Everyday IT support",
   "Account and access organization",
@@ -15,6 +14,8 @@ const focusAreas = [
   "Plain-English support summaries",
 ];
 
+// Operating cards explain the delivery model without promising emergency,
+// regulated-sector, or oversized-provider services.
 const operatingCards = [
   {
     marker: "01",
@@ -33,6 +34,7 @@ const operatingCards = [
   },
 ];
 
+// Client-owned systems are a core ParkTech positioning guardrail.
 const clientOwnedPoints = [
   "Client-owned billing, domains, accounts, and vendor relationships whenever possible",
   "Named or delegated access instead of shared personal owner logins",
@@ -40,6 +42,7 @@ const clientOwnedPoints = [
   "ParkTech access removed cleanly when a relationship ends",
 ];
 
+// Lab items describe internal delivery aids, not separate products or claims.
 const labItems = [
   "Small-office documentation templates",
   "Support intake workflow",
@@ -48,234 +51,205 @@ const labItems = [
 ];
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>About ParkTech | Small-Office IT Support</title>
-    <meta
-      name="description"
-      content="Park Technologies provides practical IT support for small offices that need systems organized, support access documented, and security hygiene improved."
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="cyber-grid min-h-screen bg-[#0a0c12]">
-    <div class="pointer-events-none absolute inset-0">
+<BaseLayout
+  title="About ParkTech | Small-Office IT Support"
+  description="Park Technologies provides practical IT support for small offices that need systems organized, support access documented, and security hygiene improved."
+>
+  <section class="mx-auto max-w-5xl px-4 py-20 text-center sm:py-24">
+    <h1
+      class="cyber-glitch glow-text text-4xl leading-tight font-semibold text-balance text-[#e0e7ff] sm:text-5xl"
+      data-text="Practical IT support for small offices."
+    >
+      Practical IT support for small offices.
+    </h1>
+    <p class="mx-auto max-w-3xl pt-7 text-lg text-[#e0e7ff]">
+      ParkTech helps professionals and local teams get technology organized,
+      documented, and easier to support.
+    </p>
+  </section>
+
+  <section
+    class="mx-auto grid max-w-7xl gap-8 px-4 pb-14 lg:grid-cols-[1.05fr_0.95fr]"
+  >
+    <div
+      class="glow relative overflow-hidden rounded-lg border border-[#3a3f5e] bg-[#181c27] p-6 sm:p-8"
+    >
       <div
-        class="absolute inset-0 bg-gradient-to-b from-[#0a0c12]/0 via-[#0a0c12]/0 to-[#0a0c12]/80"
+        class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-[#00f0c0] to-[#ff2a6d]"
       >
       </div>
-      <div
-        id="particles"
-        class="pointer-events-none fixed top-0 left-0 z-0 h-screen w-screen"
-      >
+      <p class="text-xs font-bold text-[#ff2a6d]">/&nbsp; Purpose</p>
+      <h2 class="pt-3 text-2xl font-semibold text-[#00f0c0]">
+        Practical support for offices without internal IT.
+      </h2>
+      <div class="space-y-4 pt-5 text-[#e0e7ff]">
+        <p>
+          ParkTech exists for the gap between "call the vendor" and "hire
+          full-time IT." Small offices still need help with email, files,
+          devices, access, vendors, passwords, and basic safeguards.
+        </p>
+        <p>
+          The work is direct: solve the practical issue, organize the
+          surrounding systems, and leave the client with clearer records.
+        </p>
       </div>
     </div>
-    <Particles client:only="svelte" />
-    <Navbar />
 
-    <main class="relative z-10">
-      <section class="mx-auto max-w-5xl px-4 py-20 text-center sm:py-24">
-        <h1
-          class="cyber-glitch glow-text text-4xl leading-tight font-semibold text-balance text-[#e0e7ff] sm:text-5xl"
-          data-text="Practical IT support for small offices."
-        >
-          Practical IT support for small offices.
-        </h1>
-        <p class="mx-auto max-w-3xl pt-7 text-lg text-[#e0e7ff]">
-          ParkTech helps professionals and local teams get technology organized,
-          documented, and easier to support.
-        </p>
-      </section>
+    <div class="grid gap-4 sm:grid-cols-2 sm:gap-3">
+      {
+        focusAreas.map((area) => (
+          <p class="mobile-solid-surface rounded border border-[#3a3f5e]/80 bg-[#181c27]/80 p-4 text-sm font-semibold text-[#e0e7ff]">
+            <span class="text-[#ff2a6d]">/&nbsp;</span>
+            {area}
+          </p>
+        ))
+      }
+    </div>
+  </section>
 
-      <section
-        class="mx-auto grid max-w-7xl gap-8 px-4 pb-14 lg:grid-cols-[1.05fr_0.95fr]"
+  <section class="mx-auto max-w-7xl px-4 py-14">
+    <div class="section-tag mb-6">
+      <span class="section-tag__marker">&gt;</span>
+      <span class="section-tag__text">How ParkTech works</span>
+    </div>
+
+    <div class="grid gap-5 md:grid-cols-3">
+      {
+        operatingCards.map((card) => (
+          <article class="mobile-solid-surface relative overflow-hidden rounded-lg border border-[#3a3f5e] bg-[#181c27]/90 p-6">
+            <div class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-[#00f0c0] to-[#ff2a6d]" />
+            <p class="gradient-text text-xs font-bold">{card.marker}</p>
+            <h3 class="pt-4 text-xl font-semibold text-[#e0e7ff]">
+              {card.title}
+            </h3>
+            <p class="pt-4 text-sm text-[#a0aed0]">{card.body}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section
+    class="mx-auto grid max-w-7xl gap-8 px-4 py-14 lg:grid-cols-[0.9fr_1.1fr]"
+  >
+    <div
+      class="glow-alt relative overflow-hidden rounded-lg border border-[#3a3f5e] bg-[#181c27] p-6 sm:p-8"
+    >
+      <div
+        class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-[#ff2a6d] to-[#00f0c0]"
       >
-        <div
-          class="glow relative overflow-hidden rounded-lg border border-[#3a3f5e] bg-[#181c27] p-6 sm:p-8"
-        >
-          <div
-            class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-[#00f0c0] to-[#ff2a6d]"
-          >
-          </div>
-          <p class="text-xs font-bold text-[#ff2a6d]">/&nbsp; Purpose</p>
-          <h2 class="pt-3 text-2xl font-semibold text-[#00f0c0]">
-            Practical support for offices without internal IT.
-          </h2>
-          <div class="space-y-4 pt-5 text-[#e0e7ff]">
-            <p>
-              ParkTech exists for the gap between "call the vendor" and "hire
-              full-time IT." Small offices still need help with email, files,
-              devices, access, vendors, passwords, and basic safeguards.
-            </p>
-            <p>
-              The work is direct: solve the practical issue, organize the
-              surrounding systems, and leave the client with clearer records.
-            </p>
-          </div>
-        </div>
+      </div>
+      <p class="text-xs font-bold text-[#00f0c0]">
+        /&nbsp; Operating principle
+      </p>
+      <h2 class="pt-3 text-2xl font-semibold text-[#ff2a6d]">
+        Your business systems should stay under your control.
+      </h2>
+      <p class="pt-5 text-[#e0e7ff]">
+        ParkTech's operating principle is simple: the client owns the systems.
+        ParkTech gets controlled access. ParkTech documents the work. ParkTech
+        removes access when the relationship ends.
+      </p>
+    </div>
 
-        <div class="grid gap-4 sm:grid-cols-2 sm:gap-3">
-          {
-            focusAreas.map((area) => (
-              <p class="mobile-solid-surface rounded border border-[#3a3f5e]/80 bg-[#181c27]/80 p-4 text-sm font-semibold text-[#e0e7ff]">
-                <span class="text-[#ff2a6d]">/&nbsp;</span>
-                {area}
-              </p>
-            ))
-          }
-        </div>
-      </section>
+    <div class="grid gap-4 sm:grid-cols-2 sm:gap-3">
+      {
+        clientOwnedPoints.map((point) => (
+          <p class="mobile-solid-surface rounded border border-[#3a3f5e]/80 bg-[#181c27]/80 p-4 text-sm font-semibold text-[#e0e7ff]">
+            <span class="text-[#00f0c0]">/&nbsp;</span>
+            {point}
+          </p>
+        ))
+      }
+    </div>
+  </section>
 
-      <section class="mx-auto max-w-7xl px-4 py-14">
-        <div class="section-tag mb-6">
-          <span class="section-tag__marker">&gt;</span>
-          <span class="section-tag__text">How ParkTech works</span>
-        </div>
-
-        <div class="grid gap-5 md:grid-cols-3">
-          {
-            operatingCards.map((card) => (
-              <article class="mobile-solid-surface relative overflow-hidden rounded-lg border border-[#3a3f5e] bg-[#181c27]/90 p-6">
-                <div class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-[#00f0c0] to-[#ff2a6d]" />
-                <p class="gradient-text text-xs font-bold">{card.marker}</p>
-                <h3 class="pt-4 text-xl font-semibold text-[#e0e7ff]">
-                  {card.title}
-                </h3>
-                <p class="pt-4 text-sm text-[#a0aed0]">{card.body}</p>
-              </article>
-            ))
-          }
-        </div>
-      </section>
-
-      <section
-        class="mx-auto grid max-w-7xl gap-8 px-4 py-14 lg:grid-cols-[0.9fr_1.1fr]"
+  <section class="mx-auto grid max-w-7xl gap-8 px-4 py-14 lg:grid-cols-2">
+    <div
+      class="glow relative overflow-hidden rounded-lg border border-[#3a3f5e] bg-[#181c27] p-6 sm:p-8"
+    >
+      <div
+        class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-[#00f0c0] to-[#ff2a6d]"
       >
-        <div
-          class="glow-alt relative overflow-hidden rounded-lg border border-[#3a3f5e] bg-[#181c27] p-6 sm:p-8"
-        >
-          <div
-            class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-[#ff2a6d] to-[#00f0c0]"
-          >
-          </div>
-          <p class="text-xs font-bold text-[#00f0c0]">
-            /&nbsp; Operating principle
-          </p>
-          <h2 class="pt-3 text-2xl font-semibold text-[#ff2a6d]">
-            Your business systems should stay under your control.
+      </div>
+      <p class="text-xs font-bold text-[#ff2a6d]">/&nbsp; Direct support</p>
+      <h2 class="pt-3 text-2xl font-semibold text-[#00f0c0]">
+        Hands-on support with clear follow-through.
+      </h2>
+      <p class="pt-5 text-[#e0e7ff]">
+        ParkTech keeps support practical: understand the environment, fix what
+        matters, document decisions, and explain the next step in plain English.
+      </p>
+      <p class="pt-4 text-[#a0aed0]">
+        The work is intentionally sized for small offices that need direct help
+        without an overbuilt IT program.
+      </p>
+    </div>
+
+    <div
+      class="glow-alt relative overflow-hidden rounded-lg border border-[#3a3f5e] bg-[#181c27] p-6 sm:p-8"
+    >
+      <div
+        class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-[#ff2a6d] to-[#00f0c0]"
+      >
+      </div>
+      <p class="text-xs font-bold text-[#00f0c0]">/&nbsp; ParkTech Lab</p>
+      <h2 class="pt-3 text-2xl font-semibold text-[#ff2a6d]">
+        Internal work that improves delivery.
+      </h2>
+      <p class="pt-5 text-[#e0e7ff]">
+        ParkTech Lab keeps reusable notes, checklists, and support workflows
+        that improve delivery without becoming the main offer.
+      </p>
+      <div class="mt-6 grid gap-4 sm:grid-cols-2 sm:gap-3">
+        {
+          labItems.map((item) => (
+            <p class="mobile-solid-surface-dark rounded border border-[#3a3f5e]/80 bg-[#0a0c12]/60 p-3 text-sm font-semibold text-[#e0e7ff]">
+              <span class="text-[#ff2a6d]">/&nbsp;</span>
+              {item}
+            </p>
+          ))
+        }
+      </div>
+      <p class="pt-5 text-sm font-semibold text-[#a0aed0]">
+        ParkTech does not publish client data, credentials, sensitive
+        screenshots, internal access registers, or fake case studies.
+      </p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-4 py-20">
+    <div
+      class="relative overflow-hidden rounded-lg border border-[#3a3f5e] bg-[#181c27]/95 p-6 shadow-lg sm:p-8"
+    >
+      <div
+        class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-[#00f0c0] to-[#ff2a6d]"
+      >
+      </div>
+      <div
+        class="absolute right-0 bottom-0 h-20 w-20 border-r border-b border-[#00f0c0]/30"
+      >
+      </div>
+      <div
+        class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between"
+      >
+        <div class="max-w-3xl">
+          <p class="text-xs font-bold text-[#ff2a6d]">/&nbsp; Next step</p>
+          <h2 class="pt-3 text-2xl font-bold text-[#e0e7ff]">
+            Small-office technology should be easier to understand.
           </h2>
-          <p class="pt-5 text-[#e0e7ff]">
-            ParkTech's operating principle is simple: the client owns the
-            systems. ParkTech gets controlled access. ParkTech documents the
-            work. ParkTech removes access when the relationship ends.
+          <p class="pt-2 font-semibold text-[#a0aed0]">
+            ParkTech helps clients organize the systems they already use and
+            keep clearer support records over time.
           </p>
         </div>
-
-        <div class="grid gap-4 sm:grid-cols-2 sm:gap-3">
-          {
-            clientOwnedPoints.map((point) => (
-              <p class="mobile-solid-surface rounded border border-[#3a3f5e]/80 bg-[#181c27]/80 p-4 text-sm font-semibold text-[#e0e7ff]">
-                <span class="text-[#00f0c0]">/&nbsp;</span>
-                {point}
-              </p>
-            ))
-          }
-        </div>
-      </section>
-
-      <section class="mx-auto grid max-w-7xl gap-8 px-4 py-14 lg:grid-cols-2">
-        <div
-          class="glow relative overflow-hidden rounded-lg border border-[#3a3f5e] bg-[#181c27] p-6 sm:p-8"
+        <a
+          class="glow inline-flex w-full items-center justify-center rounded bg-[#00f0c0] px-7 py-3 text-center text-sm font-bold text-[#0a0c12] transition-all duration-300 hover:-translate-y-1 hover:bg-[#00f0c0]/90 sm:w-auto"
+          href="/contact/"
         >
-          <div
-            class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-[#00f0c0] to-[#ff2a6d]"
-          >
-          </div>
-          <p class="text-xs font-bold text-[#ff2a6d]">/&nbsp; Direct support</p>
-          <h2 class="pt-3 text-2xl font-semibold text-[#00f0c0]">
-            Hands-on support with clear follow-through.
-          </h2>
-          <p class="pt-5 text-[#e0e7ff]">
-            ParkTech keeps support practical: understand the environment, fix
-            what matters, document decisions, and explain the next step in plain
-            English.
-          </p>
-          <p class="pt-4 text-[#a0aed0]">
-            The work is intentionally sized for small offices that need direct
-            help without an overbuilt IT program.
-          </p>
-        </div>
-
-        <div
-          class="glow-alt relative overflow-hidden rounded-lg border border-[#3a3f5e] bg-[#181c27] p-6 sm:p-8"
-        >
-          <div
-            class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-[#ff2a6d] to-[#00f0c0]"
-          >
-          </div>
-          <p class="text-xs font-bold text-[#00f0c0]">/&nbsp; ParkTech Lab</p>
-          <h2 class="pt-3 text-2xl font-semibold text-[#ff2a6d]">
-            Internal work that improves delivery.
-          </h2>
-          <p class="pt-5 text-[#e0e7ff]">
-            ParkTech Lab keeps reusable notes, checklists, and support
-            workflows that improve delivery without becoming the main offer.
-          </p>
-          <div class="mt-6 grid gap-4 sm:grid-cols-2 sm:gap-3">
-            {
-              labItems.map((item) => (
-                <p class="mobile-solid-surface-dark rounded border border-[#3a3f5e]/80 bg-[#0a0c12]/60 p-3 text-sm font-semibold text-[#e0e7ff]">
-                  <span class="text-[#ff2a6d]">/&nbsp;</span>
-                  {item}
-                </p>
-              ))
-            }
-          </div>
-          <p class="pt-5 text-sm font-semibold text-[#a0aed0]">
-            ParkTech does not publish client data, credentials, sensitive
-            screenshots, internal access registers, or fake case studies.
-          </p>
-        </div>
-      </section>
-
-      <section class="mx-auto max-w-6xl px-4 py-20">
-        <div
-          class="relative overflow-hidden rounded-lg border border-[#3a3f5e] bg-[#181c27]/95 p-6 shadow-lg sm:p-8"
-        >
-          <div
-            class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-[#00f0c0] to-[#ff2a6d]"
-          >
-          </div>
-          <div
-            class="absolute right-0 bottom-0 h-20 w-20 border-r border-b border-[#00f0c0]/30"
-          >
-          </div>
-          <div
-            class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between"
-          >
-            <div class="max-w-3xl">
-              <p class="text-xs font-bold text-[#ff2a6d]">/&nbsp; Next step</p>
-              <h2 class="pt-3 text-2xl font-bold text-[#e0e7ff]">
-                Small-office technology should be easier to understand.
-              </h2>
-              <p class="pt-2 font-semibold text-[#a0aed0]">
-                ParkTech helps clients organize the systems they already use and
-                keep clearer support records over time.
-              </p>
-            </div>
-            <a
-              class="glow inline-flex w-full items-center justify-center rounded bg-[#00f0c0] px-7 py-3 text-center text-sm font-bold text-[#0a0c12] transition-all duration-300 hover:-translate-y-1 hover:bg-[#00f0c0]/90 sm:w-auto"
-              href="/contact/"
-            >
-              Contact ParkTech
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <Footer />
-  </body>
-</html>
+          Contact ParkTech
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

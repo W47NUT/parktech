@@ -3,12 +3,17 @@
 
   const CONTAINER_ID = "particles";
   const STYLE_ID = "parktech-particles-style";
+
+  // Keep the count bounded. The particles are identity texture, not content,
+  // and should stay cheap on small laptops and phones.
   const PARTICLE_COUNT = 100;
 
   function randomOffset() {
     return `${Math.random() * 100 - 50}px`;
   }
 
+  // The animation keyframes are injected once because Astro may re-run this
+  // component during page restores or future client-side navigation.
   function ensureParticleStyles() {
     if (document.getElementById(STYLE_ID)) return;
 
@@ -26,6 +31,8 @@
     document.head.appendChild(style);
   }
 
+  // ParkTech's retained visual identity uses teal and pink accents. Each dot
+  // gets its own float offsets so the background feels alive without a library.
   function createParticle() {
     const particle = document.createElement("div");
     const size = Math.random() * 3 + 1;
@@ -53,6 +60,8 @@
     return particle;
   }
 
+  // replaceChildren clears any old dots before inserting new ones, which avoids
+  // duplicate particle layers after browser page restores.
   function rebuildParticles(container: HTMLElement) {
     ensureParticleStyles();
 
@@ -69,6 +78,8 @@
     let frameId: number | undefined;
     let retryId: ReturnType<typeof setTimeout> | undefined;
 
+    // The layout owns #particles, but hydration can race the DOM on slow page
+    // loads. Retry briefly, then fail quietly because this is decorative.
     const init = (attempt = 0) => {
       if (disposed) return;
 
@@ -83,6 +94,8 @@
       rebuildParticles(container);
     };
 
+    // Use the next animation frame so the container is measurable and attached
+    // before particles are generated.
     const scheduleInit = () => {
       if (frameId) cancelAnimationFrame(frameId);
       frameId = requestAnimationFrame(() => init());
@@ -93,6 +106,7 @@
     document.addEventListener("astro:page-load", scheduleInit);
 
     return () => {
+      // Cancel scheduled work and listeners so future remounts start cleanly.
       disposed = true;
       if (frameId) cancelAnimationFrame(frameId);
       if (retryId) clearTimeout(retryId);

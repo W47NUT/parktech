@@ -1,6 +1,6 @@
 <script lang="ts">
-  import "../styles/global.css";
-
+  // Visible audience cards for the homepage. Keep this list small-office
+  // focused and avoid adding verticals that would imply a larger service model.
   const clientTypes = [
     "Therapy practices",
     "Small law offices",

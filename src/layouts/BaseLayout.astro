@@ -1,0 +1,52 @@
+---
+import "../styles/global.css";
+import Navbar from "../components/navbar.svelte";
+import Footer from "../components/footer.svelte";
+import Particles from "../components/particles.svelte";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="cyber-grid min-h-screen bg-[#0a0c12]">
+    {
+      /*
+       * Shared visual shell for the primary marketing pages.
+       * The particle component writes into #particles after hydration, so keep
+       * this container in the layout instead of recreating it page by page.
+       */
+    }
+    <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-[#0a0c12]/0 via-[#0a0c12]/0 to-[#0a0c12]/80"
+      >
+      </div>
+      <div
+        id="particles"
+        class="pointer-events-none fixed top-0 left-0 z-0 h-screen w-screen"
+      >
+      </div>
+    </div>
+
+    <Particles client:only="svelte" />
+    <Navbar currentPath={currentPath} />
+    <main class="relative z-10">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

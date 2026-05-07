@@ -1,6 +1,6 @@
 <script lang="ts">
-  import "../styles/global.css";
-
+  // Good-fit cards help visitors self-identify before emailing. Keep this list
+  // aligned with the small-office V2 audience.
   const goodFits = [
     "Therapy practices",
     "Small law offices",
@@ -11,6 +11,8 @@
     "Local businesses with small teams",
   ];
 
+  // Initial-email checklist. These are safe logistical details, not a request
+  // for secrets, client records, or sensitive screenshots.
   const includeItems = [
     "Your name",
     "Business name",
@@ -21,6 +23,8 @@
     "Best contact method",
   ];
 
+  // Warning chips shown before the mailto CTA. Keep this explicit because the
+  // site does not provide a secure intake portal.
   const sensitiveItems = [
     "Passwords",
     "MFA codes",
