@@ -18,7 +18,7 @@
     <span class="section-tag__text">Who ParkTech helps</span>
   </div>
 
-  <div class="grid gap-8 lg:grid-cols-[1.2fr_1fr]">
+  <div class="grid gap-8 lg:grid-cols-[0.95fr_1.25fr] lg:items-start">
     <div class="relative self-start">
       <div class="absolute inset-0 rounded-lg bg-[#00f0c0]/20"></div>
       <div class="glow relative overflow-hidden rounded-lg border border-[#3a3f5e] bg-[#181c27]">
@@ -50,10 +50,10 @@
       </div>
     </div>
 
-    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+    <div class="grid gap-4 sm:grid-cols-2">
       {#each clientTypes as clientType}
         <div
-          class="mobile-solid-surface rounded border border-[#3a3f5e]/80 bg-[#181c27]/80 p-4 text-[#e0e7ff] backdrop-blur-sm sm:last:col-span-2 lg:last:col-span-1"
+          class="mobile-solid-surface flex min-h-16 items-center rounded border border-[#3a3f5e]/80 bg-[#181c27]/80 p-4 text-[#e0e7ff] backdrop-blur-sm sm:last:col-span-2"
         >
           <p class="font-semibold">
             <span class="text-[#ff2a6d]">/&nbsp;</span>{clientType}
