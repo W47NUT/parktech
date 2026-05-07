@@ -4,7 +4,6 @@ import Particles from '../components/particles.svelte';
 import Navbar from '../components/navbar.svelte';
 import Footer from '../components/footer.svelte';
 import Contact from '../components/contact.svelte';
-import Privacy from '../components/privacy.svelte';
 ---
 
 <html lang="en">
@@ -12,6 +11,11 @@ import Privacy from '../components/privacy.svelte';
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <title>Contact Park Technologies</title>
+    <meta
+      name="description"
+      content="Contact Park Technologies at support@parktech.dev for small-office IT support inquiries."
+    />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="cyber-grid bg-[#0a0c12] min-h-screen">
@@ -19,10 +23,11 @@ import Privacy from '../components/privacy.svelte';
       <div class="absolute inset-0 bg-gradient-to-b from-[#0a0c12]/0 via-[#0a0c12]/0 to-[#0a0c12]/80"></div>
       <div id="particles" class="fixed top-0 left-0 w-screen h-screen pointer-events-none z-0"></div>
     </div>
-    <Particles client:only />
+    <Particles client:only="svelte" />
     <Navbar />
-    <Contact />
-    <Privacy />
+    <main class="relative z-10">
+      <Contact />
+    </main>
     <Footer />
   </body>
 </html>

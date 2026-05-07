@@ -1,11 +1,24 @@
-# Astro + Svelte Example
+# Park Technologies Website
+
+This is the public website for Park Technologies.
+
+## Stack
+
+- Astro
+- Svelte
+- Tailwind CSS
+- pnpm
+
+## Commands
 
 ```sh
-pnpm create astro@latest -- --template framework-svelte
+pnpm install
+pnpm dev
+pnpm build
+pnpm preview
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/framework-svelte)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/framework-svelte)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/framework-svelte/devcontainer.json)
+## Notes
 
-This example showcases Astro working with [Svelte](https://svelte.dev/).
+Do not commit secrets, credentials, client data, PHI, financial records, or
+other sensitive information to this repository.

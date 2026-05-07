@@ -2,30 +2,33 @@
   import "../styles/global.css";
 </script>
 
-<div class="relative isolate px-6">
-  <div class="mx-auto max-w-2xl py-32">
+<section class="relative isolate px-6">
+  <div class="mx-auto max-w-4xl py-24 sm:py-32">
     <div class="text-center">
       <h1
-        class="cyber-glitch glow-text text-7xl leading-tight font-semibold text-balance text-[#e0e7ff]"
+        class="cyber-glitch glow-text text-5xl leading-tight font-semibold text-balance text-[#e0e7ff] sm:text-7xl"
         data-text="Park Technologies"
       >
         Park Technologies
       </h1>
-      <h2 class="gradient-text pt-6 text-4xl">Modern IT, Human Focus</h2>
-      <p class="gradient-text pt-8 text-lg font-medium text-pretty">
-        We build secure, fully managed IT systems tailored to your business,
-        without the bloated contracts and hidden costs
+      <h2 class="gradient-text pt-6 text-3xl font-semibold sm:text-4xl">
+        Founder-led IT support for small professional offices.
+      </h2>
+      <p class="mx-auto max-w-3xl pt-8 text-lg font-medium text-pretty text-[#e0e7ff]">
+        Park Technologies helps small offices organize their technology, solve
+        everyday IT problems, improve basic security, and document the systems
+        they rely on.
       </p>
-      <div class="flex items-center justify-center gap-x-6 pt-10">
+      <div class="flex flex-col items-center justify-center gap-4 pt-10 sm:flex-row sm:gap-x-6">
         <a
-          href="#"
+          href="/contact/"
           class="glow transform rounded bg-[#00f0c0] px-8 py-3 font-bold text-[#0a0c12] transition-all duration-300 hover:-translate-y-1 hover:bg-[#00f0c0]/90"
-          >Get started</a
+          >Contact ParkTech</a
         >
-        <a href="/services" class="text-sm/6 font-semibold text-[#ff2a6d]"
-          >Learn more <span aria-hidden="true">→</span></a
+        <a href="#how-support-works" class="text-sm/6 font-semibold text-[#ff2a6d]"
+          >Learn how support works <span aria-hidden="true">-&gt;</span></a
         >
       </div>
     </div>
   </div>
-</div>
+</section>
