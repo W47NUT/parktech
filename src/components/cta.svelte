@@ -18,11 +18,11 @@
       <div class="max-w-3xl">
         <p class="text-xs font-bold text-[#ff2a6d]">/&nbsp; Next step</p>
         <strong class="block pt-3 text-2xl text-[#e0e7ff]">
-          Need practical IT support for a small office?
+          Need to get office technology under control?
         </strong>
         <p class="pt-2 text-sm font-semibold text-[#a0aed0]">
-          Reach out with a short description of your office, the technology
-          problems you are dealing with, and what you want help improving.
+          Send a short message with your office type, user count, current issue,
+          and what you want to make easier to support.
         </p>
       </div>
 
@@ -30,7 +30,7 @@
         class="glow inline-flex w-full transform items-center justify-center rounded border border-[#00f0c0]/70 bg-[#00f0c0] px-7 py-3 text-center text-sm font-bold text-[#0a0c12] transition-all duration-300 hover:-translate-y-1 hover:bg-[#00f0c0]/90 sm:w-auto"
         href="mailto:support@parktech.dev?subject=ParkTech%20support%20inquiry"
       >
-        Email ParkTech
+        Start with a short message
       </a>
     </div>
   </div>

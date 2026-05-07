@@ -3,19 +3,19 @@
 
   const supportAreas = [
     {
-      title: "Office technology",
+      title: "Daily support",
       marker: "01",
-      body: "Workstations, printers, scanners, Wi-Fi, email, files, vendors, and the everyday systems your office depends on.",
+      body: "Help with workstations, email, files, printers, scanners, Wi-Fi, network basics, and vendor handoffs.",
     },
     {
-      title: "Security basics",
+      title: "Access basics",
       marker: "02",
-      body: "Password manager adoption, MFA review, account cleanup, device updates, backup discovery, and safer access habits.",
+      body: "Support for account ownership, password managers, MFA, device updates, backups discovery, and safer access habits.",
     },
     {
-      title: "Clear documentation",
+      title: "Documentation rhythm",
       marker: "03",
-      body: "Plain-English notes for devices, accounts, vendors, support requests, changes, and follow-up items.",
+      body: "Plain-English records for devices, accounts, vendors, changes, support requests, and follow-up items.",
     },
   ];
 
@@ -34,28 +34,23 @@
   const workingSteps = [
     {
       step: "01",
-      title: "Understand the office",
-      body: "ParkTech identifies the devices, accounts, vendors, and workflows your office relies on.",
+      title: "Map what exists",
+      body: "ParkTech identifies the devices, accounts, vendors, and workflows the office relies on.",
     },
     {
       step: "02",
-      title: "Document the environment",
-      body: "Important systems, access, devices, vendors, and risks are documented in plain English.",
+      title: "Fix the blocker",
+      body: "Support starts with the practical issue that is slowing the office down.",
     },
     {
       step: "03",
-      title: "Fix immediate issues",
-      body: "Support focuses on the problems that are actively slowing the office down.",
+      title: "Improve the basics",
+      body: "Access, MFA, password manager use, device updates, and backup questions are handled pragmatically.",
     },
     {
       step: "04",
-      title: "Improve basic security",
-      body: "ParkTech helps with practical safeguards such as MFA, password manager adoption, account cleanup, device updates, and backup discovery.",
-    },
-    {
-      step: "05",
-      title: "Keep support organized",
-      body: "Support requests, changes, and follow-up items are tracked so technology does not live only in someone's memory.",
+      title: "Leave a clear record",
+      body: "Changes, support notes, access details, and next steps are documented in plain English.",
     },
   ];
 
@@ -96,17 +91,16 @@
           class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-[#00f0c0] to-[#ff2a6d]"
         ></div>
         <h2 class="text-2xl font-semibold text-[#00f0c0]">
-          Practical support for the technology your office already depends on.
+          Get the office out of technology guesswork.
         </h2>
         <p class="pt-5 text-[#e0e7ff]">
-          Small offices do not always need a complicated IT department. They
-          need someone who can understand the environment, fix real problems,
-          document what matters, and make steady improvements over time.
+          ParkTech helps with the ordinary systems that decide whether the day
+          runs smoothly: devices, email, files, accounts, printers, scanners,
+          network basics, vendor portals, passwords, MFA, and documentation.
         </p>
         <p class="pt-5 text-sm font-semibold text-[#a0aed0]">
-          ParkTech focuses on practical IT support and risk reduction. It does
-          not claim to certify legal or regulatory requirements or replace
-          legal, insurance, or regulatory professionals.
+          The goal is practical support and reduced avoidable technology risk,
+          not overbuilt security theater or certification claims.
         </p>
       </div>
 
@@ -142,7 +136,9 @@
           <p class="gradient-text pl-3 text-xs font-bold">
             {String(index + 1).padStart(2, "0")}
           </p>
-          <p class="mt-3 flex flex-1 items-center pl-3 leading-snug font-semibold">
+          <p
+            class="mt-3 flex flex-1 items-center pl-3 leading-snug font-semibold"
+          >
             {item}
           </p>
         </div>
@@ -164,9 +160,9 @@
       class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-[#00f0c0] to-[#ff2a6d]"
     ></div>
     <h2 class="text-2xl font-semibold text-[#00f0c0]">
-      A simple process built around clarity.
+      A simple process built around useful records.
     </h2>
-    <div class="mt-8 grid auto-rows-fr gap-4 md:grid-cols-5">
+    <div class="mt-8 grid auto-rows-fr gap-4 md:grid-cols-4">
       {#each workingSteps as step}
         <div
           class="mobile-solid-surface-dark h-full rounded border border-[#3a3f5e]/80 bg-[#0a0c12]/60 p-4"
@@ -211,12 +207,12 @@
       class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-[#ff2a6d] to-[#00f0c0]"
     ></div>
     <h2 class="text-2xl font-semibold text-[#ff2a6d]">
-      Direct help from the person responsible for the work.
+      Direct help from Jessie.
     </h2>
     <p class="pt-5 text-[#e0e7ff]">
-      Small offices often need someone who can listen carefully, explain
-      clearly, document what matters, and make steady improvements without
-      overcomplicating the business.
+      Small offices often need one accountable person who can listen carefully,
+      explain clearly, document what matters, and make practical
+      recommendations.
     </p>
     <ul class="mt-6 space-y-3 text-[#e0e7ff]">
       {#each founderPoints as point}

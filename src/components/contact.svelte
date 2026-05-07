@@ -173,7 +173,7 @@
         </h3>
         <div class="space-y-4 pt-4">
           <p class="text-[#e0e7ff]">
-            ParkTech is founder-led, not a 24/7 emergency helpdesk. For normal
+            ParkTech is founder-led and is not an emergency helpdesk. For normal
             inquiries, ParkTech will review the message and respond as
             availability allows.
           </p>

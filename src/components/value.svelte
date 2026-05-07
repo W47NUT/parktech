@@ -4,7 +4,7 @@
   const clientTypes = [
     "Therapy practices",
     "Small law offices",
-    "Bookkeeping and accounting offices",
+    "Bookkeepers and accountants",
     "Small clinics",
     "Wellness offices",
     "Solo professionals",
@@ -21,29 +21,31 @@
   <div class="grid gap-8 lg:grid-cols-[0.95fr_1.25fr] lg:items-start">
     <div class="relative self-start">
       <div class="absolute inset-0 rounded-lg bg-[#00f0c0]/20"></div>
-      <div class="glow relative overflow-hidden rounded-lg border border-[#3a3f5e] bg-[#181c27]">
+      <div
+        class="glow relative overflow-hidden rounded-lg border border-[#3a3f5e] bg-[#181c27]"
+      >
         <div
           class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-[#00f0c0] to-[#ff2a6d]"
         ></div>
         <div class="p-6 sm:p-7">
           <div class="mb-4 flex">
             <h2 class="text-2xl font-semibold text-[#00f0c0]">
-              Built for offices too small for internal IT.
+              For offices where technology cannot live in one person's head.
             </h2>
           </div>
           <div class="space-y-3 text-[#e0e7ff]">
             <p>
-              Many small professional offices rely on a mix of personal
-              knowledge, vendor support, old passwords, scattered files, and
-              undocumented systems.
+              ParkTech is for offices that run on email, files, devices,
+              printers, portals, and vendor accounts but do not have internal
+              IT.
             </p>
             <p>
-              That works until something breaks, someone leaves, an account gets
-              locked, a device fails, or nobody knows who owns a critical system.
+              When access, vendors, devices, and support history are scattered,
+              routine problems turn into lost time.
             </p>
             <p>
-              ParkTech helps bring order to that environment without forcing a
-              giant IT model onto a small office.
+              ParkTech fixes the issue, cleans up the surrounding confusion, and
+              leaves useful notes behind.
             </p>
           </div>
         </div>

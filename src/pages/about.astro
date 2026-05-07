@@ -7,29 +7,29 @@ import Footer from "../components/footer.svelte";
 const focusAreas = [
   "Everyday IT support",
   "Account and access organization",
+  "Microsoft 365 and Google Workspace basics",
+  "Printer, scanner, and network help",
   "Device and system documentation",
   "Vendor coordination",
   "Password manager and MFA support",
-  "Practical security hygiene",
-  "Plain-English support notes",
-  "Small-office technology planning",
+  "Plain-English support summaries",
 ];
 
 const operatingCards = [
   {
     marker: "01",
-    title: "Understand before changing",
-    body: "Support starts by mapping the devices, accounts, vendors, workflows, and risks that already exist.",
+    title: "Start with what exists",
+    body: "Jessie maps the accounts, devices, vendors, and workflows before recommending changes.",
   },
   {
     marker: "02",
-    title: "Document the work",
-    body: "Important decisions, systems, access, and follow-up items are written down in plain English.",
+    title: "Fix and explain",
+    body: "The work focuses on the blocker, the tradeoff, and the next practical step.",
   },
   {
     marker: "03",
-    title: "Keep ownership clear",
-    body: "Client systems stay client-owned. ParkTech uses controlled access where support requires it.",
+    title: "Keep access accountable",
+    body: "ParkTech uses controlled access, documents it, and removes it when support ends.",
   },
 ];
 
@@ -45,8 +45,6 @@ const labItems = [
   "Support intake workflow",
   "Security baseline checklist",
   "Remote support workflow",
-  "Website build notes",
-  "Future documentation experiments",
 ];
 ---
 
@@ -55,10 +53,10 @@ const labItems = [
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>About Park Technologies</title>
+    <title>About ParkTech | Founder-Led Small-Office IT Support</title>
     <meta
       name="description"
-      content="Learn about Park Technologies, a founder-led IT support business for very small professional offices."
+      content="Park Technologies is a founder-led IT support business helping small offices organize systems, support access, and improve practical security hygiene."
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
@@ -81,14 +79,13 @@ const labItems = [
       <section class="mx-auto max-w-5xl px-4 py-20 text-center sm:py-24">
         <h1
           class="cyber-glitch glow-text text-4xl leading-tight font-semibold text-balance text-[#e0e7ff] sm:text-5xl"
-          data-text="Small-office IT, handled plainly."
+          data-text="Founder-led IT for small offices."
         >
-          Small-office IT, handled plainly.
+          Founder-led IT for small offices.
         </h1>
         <p class="mx-auto max-w-3xl pt-7 text-lg text-[#e0e7ff]">
-          Park Technologies helps very small professional offices get practical
-          technology support, clearer documentation, and better basic security
-          habits without turning the business into an enterprise IT project.
+          ParkTech is run by Jessie to help offices with 1 to 10 users get
+          technology organized, documented, and easier to support.
         </p>
       </section>
 
@@ -104,19 +101,17 @@ const labItems = [
           </div>
           <p class="text-xs font-bold text-[#ff2a6d]">/&nbsp; Purpose</p>
           <h2 class="pt-3 text-2xl font-semibold text-[#00f0c0]">
-            Built for offices that rely on technology but do not have internal
-            IT.
+            Practical support for offices without internal IT.
           </h2>
           <div class="space-y-4 pt-5 text-[#e0e7ff]">
             <p>
-              A small office may only have a few users, but it still depends on
-              email, files, devices, printers, vendor portals, backups,
-              passwords, and account access working the right way.
+              ParkTech exists for the gap between "call the vendor" and "hire
+              full-time IT." Small offices still need help with email, files,
+              devices, access, vendors, passwords, and basic safeguards.
             </p>
             <p>
-              ParkTech brings structure to that environment by fixing immediate
-              issues, documenting what matters, and helping the office make
-              better technology decisions over time.
+              The work is direct: solve the practical issue, organize the
+              surrounding systems, and leave the client with clearer records.
             </p>
           </div>
         </div>
@@ -200,17 +195,17 @@ const labItems = [
           </div>
           <p class="text-xs font-bold text-[#ff2a6d]">/&nbsp; Founder-led</p>
           <h2 class="pt-3 text-2xl font-semibold text-[#00f0c0]">
-            Direct help from Jessie.
+            Clients work directly with Jessie.
           </h2>
           <p class="pt-5 text-[#e0e7ff]">
-            Park Technologies is founder-led, so clients work directly with the
-            person responsible for the support, documentation, and
+            Park Technologies is founder-led, so clients work with the person
+            responsible for the support, documentation, recommendations, and
             follow-through.
           </p>
           <p class="pt-4 text-[#a0aed0]">
             Jessie's background in technical support and systems administration
-            shapes the approach: listen first, document carefully, explain
-            plainly, and avoid unnecessary complexity.
+            shapes a practical approach: understand the environment, fix what
+            matters, explain plainly, and avoid unnecessary complexity.
           </p>
         </div>
 
@@ -223,12 +218,12 @@ const labItems = [
           </div>
           <p class="text-xs font-bold text-[#00f0c0]">/&nbsp; Founder's Lab</p>
           <h2 class="pt-3 text-2xl font-semibold text-[#ff2a6d]">
-            Internal work that supports the business.
+            Internal work that improves delivery.
           </h2>
           <p class="pt-5 text-[#e0e7ff]">
-            The Founder's Lab is where ParkTech keeps build notes, templates,
-            and technical experiments that improve the way support is delivered.
-            It is credibility for the work, not the main offer.
+            The Founder's Lab is where ParkTech keeps internal notes,
+            checklists, and support workflows. It supports the business without
+            becoming the main offer.
           </p>
           <div class="mt-6 grid gap-4 sm:grid-cols-2 sm:gap-3">
             {
@@ -265,11 +260,11 @@ const labItems = [
             <div class="max-w-3xl">
               <p class="text-xs font-bold text-[#ff2a6d]">/&nbsp; Next step</p>
               <h2 class="pt-3 text-2xl font-bold text-[#e0e7ff]">
-                Technology support should make the office clearer.
+                Small-office technology should be easier to understand.
               </h2>
               <p class="pt-2 font-semibold text-[#a0aed0]">
-                ParkTech is built for small offices that need technology
-                organized, documented, and easier to support.
+                ParkTech helps clients organize the systems they already use and
+                keep clearer support records over time.
               </p>
             </div>
             <a

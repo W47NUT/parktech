@@ -1,20 +1,24 @@
 ---
-title: Trust Center — ParkTech
-description: Security, status, and transparency resources for ParkTech.
+title: Trust and Safety - ParkTech
+description: Practical trust and safety notes for Park Technologies.
 ---
 
-# Trust Center
+# Trust and Safety
 
-**Security contact:** [security@parktech.dev](mailto:security@parktech.dev)
+ParkTech is built around practical support, client-owned systems, controlled
+access, and plain-English documentation.
+
+For website security concerns, email
+[security@parktech.dev](mailto:security@parktech.dev).
+
+For support inquiries, email
+[support@parktech.dev](mailto:support@parktech.dev).
+
+Do not send passwords, MFA codes, PHI, patient information, client case details,
+financial records, private documents, or sensitive screenshots by email unless a
+secure method has been agreed on first.
+
+## Resources
 
 - [Privacy Notice](/legal/privacy/)
 - [Terms of Use](/legal/terms/)
-- [Service Status](https://status.parktech.dev/)
-
-## Operational Transparency
-- **Backups**: encrypted restic to object storage; restore drills logged quarterly.
-- **Logging & Observability**: Loki/Promtail; alert on ingestion gaps.
-- **Incident Response**: documented playbook & policy; P1 response ≤ 1 hour.
-
-© Park Technologies
-
