@@ -1,7 +1,7 @@
 # Park Technologies Website
 
 Public marketing website for Park Technologies, built for the current V2
-small-office IT support positioning.
+practical IT support positioning.
 
 ## Stack
 
@@ -42,7 +42,8 @@ Previews the built site locally.
 - Contact uses `support@parktech.dev`.
 - Do not add a contact form backend, scheduling tool, tracking, or analytics
   unless explicitly approved.
-- Keep public copy practical, plain-English, and small-office focused.
+- Keep public copy practical, plain-English, and focused on professionals,
+  offices, and local teams.
 
 ## Repository Safety
 

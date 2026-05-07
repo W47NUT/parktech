@@ -1,0 +1,14 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+const { frontmatter } = Astro.props;
+const title = frontmatter?.title ?? "Park Technologies";
+const description =
+  frontmatter?.description ?? "Practical IT support from Park Technologies.";
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="markdown-page relative mx-auto max-w-4xl px-4 py-16 sm:py-20">
+    <slot />
+  </section>
+</BaseLayout>

@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownLayout.astro
 title: Website Terms of Use — ParkTech
 description: Terms governing use of the ParkTech website.
 ---
@@ -38,7 +39,7 @@ We may update these Terms at any time. The “Effective Date” below indicates 
 ## 8. Contact
 
 questions@parktech.dev  
-Park Technologies, LLC — [Largo, FL]
+Park Technologies, LLC
 
 _Effective Date: 2025-10-06_
 

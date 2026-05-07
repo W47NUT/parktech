@@ -15,96 +15,145 @@ Privacy, and Terms.
 
 ## 2. Pages Reviewed
 
-- Home: reviewed and sharpened.
-- About: reviewed and tightened.
-- Contact: reviewed and kept email-only.
-- Services: converted into a V2-safe Support Areas page.
-- Trust: reviewed because it is still a generated route; stale status and
-  response-time language was removed.
-- Legal Privacy and Terms: scanned only. Not rewritten.
+- Home: reviewed for V2 positioning, metadata, links, and claim safety.
+- About: reviewed for metadata, broad positioning, operating model copy, and
+  heading structure.
+- Contact: reviewed for email-only intake, sensitive-information warnings, and
+  response-expectation language.
+- Trust: reviewed as a public route for safe contact and sensitive-information
+  guidance.
+- Privacy and Terms: scanned for stale site-behavior claims and legal
+  disclaimers. Privacy was updated to remove contact-form and tracking language.
+- `public/.well-known/security.txt`: reviewed and kept conservative. It lists
+  security contact and policy location only; it does not promise a bounty, SLA,
+  emergency response, or formal compliance program.
 
 ## 3. Navigation Status
 
 Pass.
 
-Main navigation and footer navigation are Home, About, Contact. Services is not
-in the nav.
+Main navigation and footer navigation are Home, About, Contact. The nav brand
+label is no longer an `h1`, leaving each primary Astro page with one clear page
+heading.
 
-## 4. CTA Status
-
-Pass.
-
-Current CTA language is consistent with the V2 direction:
-
-- Start with a short message
-- Contact ParkTech
-- Email ParkTech
-- View Home overview
-
-No free consultation, fear-based, or enterprise-style CTA language was found.
-
-## 5. Services Page Status
+## 4. `/services/` Route/Redirect Status
 
 Pass.
 
-The `/services/` route was removed. The site is intentionally focused on Home,
-About, and Contact. Support areas are summarized on the homepage instead of
-maintaining a separate Services page.
+The deleted `/services` and `/services/` paths are not represented as site
+pages. `vercel.json` now redirects both old paths to `/` permanently.
 
-## 6. Contact/Email Status
+## 5. Sitemap/Robots Status
 
 Pass.
 
-The Contact page uses `support@parktech.dev`, has no contact form backend, no
-scheduling software, and no tracking/analytics additions.
+`public/sitemap.xml` now lists:
 
-The Contact page warns visitors not to send passwords, MFA codes, PHI, patient
-information, client case details, financial records, private documents, or
-sensitive screenshots by email unless a secure method has been agreed on.
+- `https://parktech.dev/`
+- `https://parktech.dev/about/`
+- `https://parktech.dev/contact/`
+- `https://parktech.dev/trust/`
+- `https://parktech.dev/legal/privacy/`
+- `https://parktech.dev/legal/terms/`
 
-## 7. Mobile/Responsive Notes
+`public/robots.txt` allows crawling and points to the sitemap. The old Services
+route is not listed.
 
-Source-level responsive review passed.
+## 6. Security Headers Status
 
-The updated sections keep the existing responsive grid and full-width mobile
-button patterns. Email text uses wrapping behavior, cards stack on small screens,
-and the dark cyber/grid/particle visual identity remains intact.
+Pass with one documented CSP tradeoff.
 
-Limitation: no headless browser was available in this environment, so this audit
-did not include screenshot-based desktop/mobile visual QA. A final manual
-browser pass on phone-width and desktop-width viewports is still recommended.
+A new root `vercel.json` applies these headers to all routes:
 
-## 8. Overclaim/Compliance Language Scan
+- Strict-Transport-Security
+- X-Content-Type-Options
+- Referrer-Policy
+- Permissions-Policy
+- X-Frame-Options
+- Content-Security-Policy
 
-Required command run:
+The Tailwind CDN script was removed from `BaseLayout.astro`; the site now uses
+the local Tailwind/Vite setup already present in the project.
+
+The CSP uses `script-src 'self' 'unsafe-inline'`. A stricter
+`script-src 'self'` would block Astro's inline island bootstrapping scripts for
+the existing Svelte particle effect. No external script domains are allowed.
+
+## 7. Dependency Audit Result
+
+Incomplete due to network/DNS failure in this environment.
+
+Command run:
 
 ```sh
-grep -RInE "24/7|SOC|MDR|EDR|SIEM|HIPAA|PCI|ISO|SOC 2|guarantee|guaranteed|breach-proof|enterprise-grade|incident response|vulnerability|audit-ready|compliance|15-minute|uptime|dedicated help desk|round-the-clock|full cybersecurity|automated compliance" README.md src/pages src/components || true
+pnpm audit --prod
 ```
 
-Result: one hit remains in `src/pages/legal/terms.md`, where the Terms page says
-the site is not an offer, guarantee, or legal/technical advice. That is a legal
-disclaimer, not a marketing overclaim.
+Result: failed after retries with `EAI_AGAIN` and `fetch failed` while reaching
+the npm registry advisory endpoint. No dependency changes were made.
 
-The hidden `/trust/` page previously had stale operational/status language and a
-response-time expectation; that was removed.
+## 8. Secret/Sensitive-Data Scan Result
 
-## 9. Remaining Recommended Fixes Before Deploy
+Pass with expected public-warning hits.
 
-- Do one real browser visual pass on mobile and desktop widths.
-- Review legal Privacy and Terms separately if ParkTech V2 needs updated legal
-  wording, but do not treat the remaining legal disclaimer scan hit as a content
-  overclaim.
-- Confirm whether `/trust/` should remain publicly routable long term. It is now
-  V2-safe, but it is not part of the primary Home/About/Contact site flow.
-- The old `/services/` route has been removed intentionally.
+No API keys, private keys, tokens, credentials, client data, old Proton email,
+or old phone-number contact information were found in the reviewed source.
 
-## 10. Recommendation
+An `.envrc` file exists and contains only `use flake`; it does not contain
+secrets. Sensitive-data search hits are public warnings telling visitors not to
+email passwords, MFA codes, PHI, patient information, client case details,
+financial records, private documents, or sensitive screenshots.
+
+## 9. Contact/Email Status
+
+Pass.
+
+Public support intake uses `support@parktech.dev`. There is no contact form
+backend, scheduling software, analytics script, or tracking addition. The
+Contact and Trust pages warn visitors not to email sensitive material unless a
+secure method has been agreed on first.
+
+## 10. Accessibility/Semantics Notes
+
+Pass for the basic source-level pass.
+
+The primary pages have clear page-level `h1` headings, nav links have readable
+labels, mailto links expose the destination address or action clearly, and CTA
+controls that navigate or email are links. The logo has descriptive alt text.
+No fake form controls were found.
+
+## 11. Claim Scan Result
+
+Pass with one acceptable legal-disclaimer hit.
+
+The site copy does not market emergency coverage, SOC/MDR/SIEM services,
+breach-proof systems, guaranteed uptime, guaranteed response time, a dedicated
+help desk, automated compliance packs, or full cybersecurity protection.
+
+The remaining source hit is in `src/pages/legal/terms.md`, where the Terms page
+says the website is not an offer, guarantee, or legal/technical advice. That is
+a disclaimer, not a marketing claim.
+
+## 12. SEO Basics Status
+
+Pass.
+
+Home, About, Contact, and Trust have descriptive titles and descriptions without
+boxed-in office-size language. Sitemap and robots are current. No stale Services
+page appears in the sitemap.
+
+## 13. Remaining Issues
+
+- `pnpm audit --prod` must be rerun from an environment that can reach the npm
+  registry before treating the dependency audit as complete.
+- The security header configuration should be verified on Vercel after deploy
+  because headers and redirects are platform-applied behavior.
+
+## 14. Final Recommendation
 
 Ready after minor fixes.
 
-The site builds, the primary V2 content is sharper, the nav is correct, the
-old Services route has been removed, the hidden Trust route no longer makes
-stale promises, and the required overclaim scan only flags an acceptable legal
-disclaimer. The remaining blocker is a final human visual QA pass in real
-browsers.
+The website build, routing, content safety, sitemap/robots, contact posture,
+basic semantics, and security-header configuration are deploy-ready. The only
+required deploy-readiness item still unresolved is the production dependency
+audit, which was blocked by registry access in this environment.

@@ -175,6 +175,78 @@ body {
   color: transparent;
 }
 
+/* Markdown routes
+   Trust and legal pages use the shared dark shell but need simple content
+   defaults because Markdown output does not carry Tailwind classes. */
+.markdown-page {
+  color: #e0e7ff;
+}
+
+.markdown-page h1 {
+  color: #e0e7ff;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.12;
+  text-wrap: balance;
+  text-shadow: 0 0 8px rgba(0, 240, 192, 0.4);
+}
+
+.markdown-page h2 {
+  color: #00f0c0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 2.25rem;
+}
+
+.markdown-page p,
+.markdown-page li {
+  color: #a0aed0;
+  line-height: 1.7;
+}
+
+.markdown-page p {
+  margin-top: 1rem;
+}
+
+.markdown-page ul {
+  display: grid;
+  gap: 0.6rem;
+  list-style: none;
+  margin-top: 1rem;
+  padding-left: 0;
+}
+
+.markdown-page li::before {
+  color: #ff2a6d;
+  content: "/ ";
+  font-weight: 700;
+}
+
+.markdown-page a {
+  color: #00f0c0;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 240, 192, 0.45);
+  text-underline-offset: 0.2em;
+}
+
+.markdown-page strong {
+  color: #e0e7ff;
+}
+
+.markdown-page hr {
+  border: 0;
+  border-top: 1px solid rgba(58, 63, 94, 0.6);
+  margin-top: 2rem;
+}
+
+@media (min-width: 640px) {
+  .markdown-page h1 {
+    font-size: 3rem;
+  }
+}
+
 /* Homepage support grid
    Stable card heights prevent the support list from jumping as labels wrap. */
 .support-help-grid {

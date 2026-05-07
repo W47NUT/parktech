@@ -1,6 +1,6 @@
 <script lang="ts">
   // Good-fit cards help visitors self-identify before emailing. Keep this list
-  // aligned with the small-office V2 audience.
+  // aligned with the V2 audience of professionals and local teams.
   const goodFits = [
     "Therapy practices",
     "Small law offices",
@@ -51,8 +51,8 @@
       Contact Park Technologies
     </h1>
     <p class="max-w-2xl pt-6 text-[#e0e7ff]">
-      Need practical IT support for a small office? Send a short description of
-      your office, what you need help with, and the best way to contact you.
+      Need practical IT support? Send a short description of your office or
+      team, what you need help with, and the best way to contact you.
     </p>
   </div>
 
@@ -92,10 +92,10 @@
       class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-[#00f0c0] to-[#ff2a6d]"
     ></div>
     <h2 class="text-2xl font-semibold text-[#00f0c0]">
-      ParkTech is built for small professional offices.
+      ParkTech is built for professionals and local teams.
     </h2>
     <p class="pt-5 text-[#e0e7ff]">
-      Park Technologies works with very small offices that need practical
+      Park Technologies works with offices and teams that need practical
       technology support, clearer documentation, and help improving basic
       security hygiene.
     </p>
@@ -216,9 +216,9 @@
           Ready to make your office technology clearer?
         </h2>
         <p class="pt-2 font-semibold text-[#a0aed0]">
-          ParkTech is focused on small professional offices and local
-          businesses. Remote support may be available depending on the
-          situation, with onsite support considered where practical.
+          ParkTech is focused on professional practices, local businesses, and
+          teams without internal IT. Remote support may be available depending
+          on the situation, with onsite support considered where practical.
         </p>
       </div>
       <a

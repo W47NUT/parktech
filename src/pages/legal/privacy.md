@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownLayout.astro
 title: Website Privacy Notice — ParkTech
 description: How Park Technologies, LLC collects and uses information on parktech.dev.
 ---
@@ -9,9 +10,11 @@ This Privacy Notice explains how Park Technologies, LLC (“ParkTech”, “we�
 
 ## 1. Information We Collect
 
-- **You provide:** contact form details (name, email, message).
-- **Automatic:** basic technical data (IP address, browser type, pages viewed).
-- **Cookies/Analytics:** if enabled, we use cookies to understand Site usage. You can control cookies via your browser.
+- **You provide:** information you choose to send by email.
+- **Automatic:** basic technical data may be processed by hosting infrastructure
+  to serve and secure the Site.
+- **Cookies/Analytics:** the Site does not use a contact form, tracking
+  analytics, or non-essential cookies.
 
 ## 2. How We Use Information
 
@@ -19,7 +22,8 @@ To respond to inquiries, operate and improve the Site, maintain security, and co
 
 ## 3. Sharing
 
-We may share with service providers (e.g., hosting/analytics) under contract, or as required by law. We do not sell or rent your information.
+We may share with service providers such as hosting providers under contract, or
+as required by law. We do not sell or rent your information.
 
 ## 4. Data Security & Retention
 
@@ -40,7 +44,7 @@ We may update this Notice; the “Effective Date” shows the latest version.
 ## 8. Contact
 
 privacy@parktech.dev  
-Park Technologies, LLC — [Largo, FL]
+Park Technologies, LLC
 
 _Effective Date: 2025-10-06_
 

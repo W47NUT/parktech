@@ -33,7 +33,7 @@
     <nav class="mx-0 flex flex-wrap items-center justify-between gap-4">
       <a href="/" class="flex items-center">
         <img src={logoUrl} class="h-7 w-7" alt="Park Technologies logo" />
-        <h1 class="pl-4 font-semibold text-[#e0e7ff]">Park Technologies</h1>
+        <span class="pl-4 font-semibold text-[#e0e7ff]">Park Technologies</span>
       </a>
       <ul class="flex items-center space-x-2 px-0 py-2 sm:space-x-6 sm:px-4">
         {#each navigationLinks as { label, href }}

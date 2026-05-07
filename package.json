@@ -9,15 +9,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/svelte": "^7.1.0",
-    "@tailwindcss/vite": "^4.1.7",
-    "astro": "^5.13.2",
-    "simple-icons": "^14.13.0",
-    "svelte": "^5.25.7",
-    "tailwindcss": "^4.1.7"
+    "@astrojs/svelte": "^8.1.0",
+    "@tailwindcss/vite": "^4.2.4",
+    "astro": "^6.2.2",
+    "simple-icons": "^16.18.1",
+    "svelte": "^5.55.5",
+    "tailwindcss": "^4.2.4"
   },
   "devDependencies": {
-    "@iconify/svelte": "^5.0.0",
+    "@iconify/svelte": "^5.2.1",
     "prettier": "3.5.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-svelte": "^3.4.0",

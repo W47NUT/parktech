@@ -1,5 +1,6 @@
 ---
-title: Trust and Safety - ParkTech
+layout: ../layouts/MarkdownLayout.astro
+title: Trust and Safety | ParkTech
 description: Practical trust and safety notes for Park Technologies.
 ---
 

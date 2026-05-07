@@ -213,8 +213,8 @@
       Direct IT support, documented clearly.
     </h2>
     <p class="pt-5 text-[#e0e7ff]">
-      Small offices often need accountable support that can listen carefully,
-      explain clearly, document what matters, and make practical
+      Offices and teams often need accountable support that can listen
+      carefully, explain clearly, document what matters, and make practical
       recommendations.
     </p>
     <ul class="mt-6 space-y-3 text-[#e0e7ff]">
