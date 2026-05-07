@@ -1,19 +1,44 @@
 @import "tailwindcss";
 
-html,
+html {
+  min-height: 100%;
+  background: #0a0c12;
+}
+
 body {
+  min-height: 100%;
   background: #0a0c12;
   font-family: system-ui;
   margin: 0;
+  overflow-x: hidden;
   padding: 0;
 }
 
 .cyber-grid {
+  position: relative;
+  isolation: isolate;
+  background-color: #0a0c12;
+}
+
+.cyber-grid::before {
+  content: "";
+  position: fixed;
+  z-index: 1;
+  inset: 0;
+  pointer-events: none;
   background-image:
     linear-gradient(rgba(0, 240, 192, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 240, 192, 0.05) 1px, transparent 1px);
+  background-position: top center;
   background-size: 30px 30px;
 }
+
+.cyber-grid > main,
+.cyber-grid > footer {
+  position: relative;
+  z-index: 10;
+}
+
 .section-tag {
   display: inline-flex;
   max-width: 100%;
@@ -129,13 +154,45 @@ body {
   color: transparent;
 }
 
+.support-help-grid {
+  display: grid;
+  height: 100%;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.support-help-card {
+  min-height: 7rem;
+}
+
+.support-help-card__text {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  margin-top: 0.75rem;
+  padding-left: 0.75rem;
+  line-height: 1.35;
+}
+
+@media (min-width: 640px) {
+  .support-help-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: minmax(7rem, 1fr);
+  }
+
+  .support-help-grid > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    min-height: 6.5rem;
+  }
+}
+
 .mobile-solid-surface,
 .mobile-solid-surface-dark {
   background-clip: padding-box;
 }
 
 @media (max-width: 640px) {
-  .cyber-grid {
+  .cyber-grid::before {
     background-image:
       linear-gradient(rgba(0, 240, 192, 0.035) 1px, transparent 1px),
       linear-gradient(90deg, rgba(0, 240, 192, 0.035) 1px, transparent 1px);

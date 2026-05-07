@@ -14,7 +14,7 @@
       <h2
         class="gradient-text pt-5 text-2xl leading-tight font-semibold sm:pt-6 sm:text-4xl"
       >
-        Practical IT support for offices with 1 to 10 users.
+        Practical IT support, documented clearly.
       </h2>
       <p
         class="mx-auto max-w-3xl pt-6 text-base font-medium text-pretty text-[#e0e7ff] sm:pt-8 sm:text-lg"

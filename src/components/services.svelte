@@ -122,10 +122,10 @@
       </div>
     </div>
 
-    <div class="grid auto-rows-fr gap-4 sm:grid-cols-2">
+    <div class="support-help-grid">
       {#each helpItems as item, index}
         <div
-          class="mobile-solid-surface relative flex h-full min-h-28 flex-col overflow-hidden rounded border border-[#3a3f5e]/80 bg-[#181c27]/80 p-4 text-[#e0e7ff] backdrop-blur-sm sm:last:col-span-2"
+          class="support-help-card mobile-solid-surface relative flex h-full flex-col overflow-hidden rounded border border-[#3a3f5e]/80 bg-[#181c27]/80 p-4 text-[#e0e7ff] backdrop-blur-sm"
         >
           <div
             class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-[#00f0c0] to-[#ff2a6d]"
@@ -136,9 +136,7 @@
           <p class="gradient-text pl-3 text-xs font-bold">
             {String(index + 1).padStart(2, "0")}
           </p>
-          <p
-            class="mt-3 flex flex-1 items-center pl-3 leading-snug font-semibold"
-          >
+          <p class="support-help-card__text font-semibold">
             {item}
           </p>
         </div>
