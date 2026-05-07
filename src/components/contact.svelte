@@ -136,58 +136,58 @@
     class="relative overflow-hidden rounded-lg border border-[#3a3f5e] bg-[#181c27]/90 p-6 sm:p-8"
   >
     <div
-      class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-[#00f0c0] to-[#ff2a6d]"
+      class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-[#00f0c0] via-[#ff2a6d] to-[#00f0c0]"
     ></div>
-    <h2 class="text-2xl font-semibold text-[#00f0c0]">
-      Please do not send sensitive information by email.
+    <h2 class="text-2xl font-semibold text-[#e0e7ff]">
+      Before you email ParkTech
     </h2>
-    <p class="pt-5 text-[#e0e7ff]">
-      Do not send passwords, MFA codes, patient information, client case
-      details, financial records, private documents, or sensitive screenshots
-      through email unless a secure method has been agreed on.
-    </p>
-    <p class="pt-4 text-[#a0aed0]">
-      If sensitive information is involved, describe the issue generally first.
-    </p>
-    <div class="mt-6 grid auto-rows-fr gap-3 sm:grid-cols-2 lg:grid-cols-3">
-      {#each sensitiveItems as item}
-        <p
-          class="mobile-solid-surface-dark flex min-h-14 items-center rounded border border-[#ff2a6d]/50 bg-[#0a0c12]/60 px-4 py-3 text-sm leading-snug font-semibold text-[#e0e7ff] sm:last:col-span-2 lg:last:col-span-3 lg:last:justify-center"
-        >
-          {item}
-        </p>
-      {/each}
-    </div>
-  </div>
-</section>
 
-<section class="relative mx-auto max-w-6xl px-4 pb-12">
-  <div
-    class="relative overflow-hidden rounded-lg border border-[#3a3f5e] bg-[#181c27]/90 p-6 sm:p-8"
-  >
-    <div
-      class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-[#ff2a6d] to-[#00f0c0]"
-    ></div>
-    <div class="grid gap-5 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
-      <h2 class="text-2xl font-semibold text-[#ff2a6d]">
-        Response expectations
-      </h2>
-      <div class="space-y-4">
-        <p class="text-[#e0e7ff]">
-          ParkTech is a founder-led small business, not an emergency service
-          provider. For normal inquiries, ParkTech will review the message and
-          respond as availability allows.
+    <div class="mt-7 grid gap-8 lg:grid-cols-2 lg:gap-10">
+      <div class="lg:border-r lg:border-[#3a3f5e]/80 lg:pr-10">
+        <h3 class="text-lg font-semibold text-[#00f0c0]">
+          Sensitive information warning
+        </h3>
+        <p class="pt-4 text-[#e0e7ff]">
+          Do not send passwords, MFA codes, patient information, client case
+          details, financial records, private documents, or sensitive
+          screenshots by email unless a secure method has been agreed on.
         </p>
-        <p class="text-[#a0aed0]">
-          Urgent issues should be described clearly, especially if they involve
-          account access, business outage, suspected compromise, or a lost or
-          stolen device.
+        <p class="pt-4 text-[#a0aed0]">
+          If sensitive information is involved, describe the issue generally
+          first.
         </p>
-        <p class="text-sm font-semibold text-[#a0aed0]">
-          Unless separately agreed in writing, contacting ParkTech does not
-          create an emergency support window, formal SLA, or regulatory
-          relationship.
-        </p>
+        <div class="mt-5 flex flex-wrap gap-2">
+          {#each sensitiveItems as item}
+            <p
+              class="mobile-solid-surface-dark rounded border border-[#ff2a6d]/45 bg-[#0a0c12]/60 px-3 py-2 text-xs leading-tight font-semibold text-[#e0e7ff]"
+            >
+              {item}
+            </p>
+          {/each}
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold text-[#ff2a6d]">
+          Response expectations
+        </h3>
+        <div class="space-y-4 pt-4">
+          <p class="text-[#e0e7ff]">
+            ParkTech is founder-led, not a 24/7 emergency helpdesk. For normal
+            inquiries, ParkTech will review the message and respond as
+            availability allows.
+          </p>
+          <p class="text-[#a0aed0]">
+            Urgent issues should be described clearly, especially if they
+            involve account access, business outage, suspected compromise, or
+            lost/stolen devices.
+          </p>
+          <p class="text-sm font-semibold text-[#a0aed0]">
+            Unless separately agreed in writing, contacting ParkTech does not
+            create an emergency support window, formal SLA, or regulatory
+            relationship.
+          </p>
+        </div>
       </div>
     </div>
   </div>
