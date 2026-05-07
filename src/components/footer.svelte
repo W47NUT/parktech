@@ -8,7 +8,7 @@
       <div>
         <p class="font-semibold text-[#e0e7ff]">Park Technologies</p>
         <p class="pt-2 text-sm text-[#a0aed0]">
-          Founder-led IT support for small professional offices.
+          Practical IT support for small professional offices.
         </p>
       </div>
       <nav class="flex gap-5 text-sm font-semibold">

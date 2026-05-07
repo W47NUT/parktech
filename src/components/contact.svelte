@@ -173,9 +173,9 @@
         </h3>
         <div class="space-y-4 pt-4">
           <p class="text-[#e0e7ff]">
-            ParkTech is founder-led and is not an emergency helpdesk. For normal
-            inquiries, ParkTech will review the message and respond as
-            availability allows.
+            ParkTech provides direct support and is not an emergency helpdesk.
+            For normal inquiries, ParkTech will review the message and respond
+            as availability allows.
           </p>
           <p class="text-[#a0aed0]">
             Urgent issues should be described clearly, especially if they

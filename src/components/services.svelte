@@ -62,7 +62,7 @@
     "No raw passwords in documentation",
   ];
 
-  const founderPoints = [
+  const supportPoints = [
     "Direct point of contact",
     "Plain-English explanations",
     "Careful documentation",
@@ -205,15 +205,14 @@
       class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-[#ff2a6d] to-[#00f0c0]"
     ></div>
     <h2 class="text-2xl font-semibold text-[#ff2a6d]">
-      Direct help from Jessie.
+      Direct IT support, documented clearly.
     </h2>
     <p class="pt-5 text-[#e0e7ff]">
-      Small offices often need one accountable person who can listen carefully,
-      explain clearly, document what matters, and make practical
-      recommendations.
+      Small offices often need accountable support that can listen carefully,
+      explain clearly, document what matters, and make practical recommendations.
     </p>
     <ul class="mt-6 space-y-3 text-[#e0e7ff]">
-      {#each founderPoints as point}
+      {#each supportPoints as point}
         <li><span class="text-[#00f0c0]">/&nbsp;</span>{point}</li>
       {/each}
     </ul>
