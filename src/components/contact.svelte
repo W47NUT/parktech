@@ -36,10 +36,9 @@
   class="relative mx-auto grid max-w-6xl gap-8 px-4 py-14 sm:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:items-end"
 >
   <div>
-    <div
-      class="mb-6 inline-block rounded border border-[#3a3f5e]/50 bg-[#181c27]/40 px-3 py-1 text-sm text-[#a0aed0] backdrop-blur-sm"
-    >
-      <span class="text-[#00f0c0]">&gt;&nbsp;</span> Contact
+    <div class="section-tag mb-6">
+      <span class="section-tag__marker">&gt;</span>
+      <span class="section-tag__text">Contact</span>
     </div>
     <h1
       class="cyber-glitch glow-text text-4xl leading-tight font-semibold text-balance text-[#e0e7ff] sm:text-5xl"
@@ -96,10 +95,10 @@
       technology support, clearer documentation, and help improving basic
       security hygiene.
     </p>
-    <div class="mt-6 grid gap-3 sm:grid-cols-2">
+    <div class="mt-6 grid gap-4 sm:grid-cols-2 sm:gap-3">
       {#each goodFits as fit}
         <p
-          class="rounded border border-[#3a3f5e]/80 bg-[#0a0c12]/60 p-3 text-sm font-semibold text-[#e0e7ff] sm:last:col-span-2"
+          class="mobile-solid-surface-dark rounded border border-[#3a3f5e]/80 bg-[#0a0c12]/60 p-3 text-sm font-semibold text-[#e0e7ff] sm:last:col-span-2"
         >
           <span class="text-[#ff2a6d]">/&nbsp;</span>{fit}
         </p>
@@ -120,10 +119,10 @@
       To help ParkTech understand the request, include the practical details
       needed to size up the issue.
     </p>
-    <ul class="mt-6 grid gap-3 text-[#e0e7ff] sm:grid-cols-2">
+    <ul class="mt-6 grid gap-4 text-[#e0e7ff] sm:grid-cols-2 sm:gap-3">
       {#each includeItems as item}
         <li
-          class="rounded border border-[#3a3f5e]/80 bg-[#0a0c12]/60 p-3 text-sm font-semibold sm:last:col-span-2"
+          class="mobile-solid-surface-dark rounded border border-[#3a3f5e]/80 bg-[#0a0c12]/60 p-3 text-sm font-semibold sm:last:col-span-2"
         >
           <span class="text-[#00f0c0]">/&nbsp;</span>{item}
         </li>
@@ -150,10 +149,10 @@
     <p class="pt-4 text-[#a0aed0]">
       If sensitive information is involved, describe the issue generally first.
     </p>
-    <div class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="mt-6 grid gap-4 sm:grid-cols-2 sm:gap-3 lg:grid-cols-4">
       {#each sensitiveItems as item}
         <p
-          class="rounded border border-[#ff2a6d]/50 bg-[#0a0c12]/60 p-3 text-sm font-semibold text-[#e0e7ff] sm:last:col-span-2 lg:last:col-span-2"
+          class="mobile-solid-surface-dark rounded border border-[#ff2a6d]/50 bg-[#0a0c12]/60 p-3 text-sm font-semibold text-[#e0e7ff] sm:last:col-span-2 lg:last:col-span-2"
         >
           {item}
         </p>

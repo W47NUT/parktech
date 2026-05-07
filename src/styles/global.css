@@ -14,6 +14,31 @@ body {
     linear-gradient(90deg, rgba(0, 240, 192, 0.05) 1px, transparent 1px);
   background-size: 30px 30px;
 }
+.section-tag {
+  display: inline-flex;
+  max-width: 100%;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid rgba(58, 63, 94, 0.5);
+  border-radius: 0.25rem;
+  background: rgba(24, 28, 39, 0.35);
+  padding: 0.35rem 0.75rem;
+  color: #e0e7ff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.1;
+  vertical-align: top;
+  backdrop-filter: blur(4px);
+}
+.section-tag__marker {
+  flex: none;
+  color: #00f0c0;
+  line-height: 1;
+}
+.section-tag__text {
+  min-width: 0;
+  line-height: 1.15;
+}
 .cyber-glitch {
   position: relative;
   display: inline-block;
@@ -102,4 +127,33 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.mobile-solid-surface,
+.mobile-solid-surface-dark {
+  background-clip: padding-box;
+}
+
+@media (max-width: 640px) {
+  .cyber-grid {
+    background-image:
+      linear-gradient(rgba(0, 240, 192, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 240, 192, 0.035) 1px, transparent 1px);
+    background-size: 34px 34px;
+  }
+
+  .section-tag {
+    align-items: flex-start;
+    padding: 0.35rem 0.65rem;
+  }
+
+  .mobile-solid-surface {
+    background-color: rgba(24, 28, 39, 0.96) !important;
+    border-color: rgba(58, 63, 94, 0.7) !important;
+  }
+
+  .mobile-solid-surface-dark {
+    background-color: rgba(10, 12, 18, 0.82) !important;
+    border-color: rgba(58, 63, 94, 0.68) !important;
+  }
 }

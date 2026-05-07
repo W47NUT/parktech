@@ -79,11 +79,6 @@ const labItems = [
 
     <main class="relative z-10">
       <section class="mx-auto max-w-5xl px-4 py-20 text-center sm:py-24">
-        <div
-          class="mb-8 inline-block rounded border border-[#3a3f5e]/50 bg-[#181c27]/40 px-3 py-1 text-sm text-[#a0aed0] backdrop-blur-sm"
-        >
-          <span class="text-[#00f0c0]">&gt;&nbsp;</span> About ParkTech
-        </div>
         <h1
           class="cyber-glitch glow-text text-4xl leading-tight font-semibold text-balance text-[#e0e7ff] sm:text-5xl"
           data-text="Small-office IT, handled plainly."
@@ -126,10 +121,10 @@ const labItems = [
           </div>
         </div>
 
-        <div class="grid gap-3 sm:grid-cols-2">
+        <div class="grid gap-4 sm:grid-cols-2 sm:gap-3">
           {
             focusAreas.map((area) => (
-              <p class="rounded border border-[#3a3f5e]/80 bg-[#181c27]/80 p-4 text-sm font-semibold text-[#e0e7ff]">
+              <p class="mobile-solid-surface rounded border border-[#3a3f5e]/80 bg-[#181c27]/80 p-4 text-sm font-semibold text-[#e0e7ff]">
                 <span class="text-[#ff2a6d]">/&nbsp;</span>
                 {area}
               </p>
@@ -139,18 +134,15 @@ const labItems = [
       </section>
 
       <section class="mx-auto max-w-7xl px-4 py-14">
-        <div
-          class="mb-6 inline-block rounded border border-[#3a3f5e]/50 bg-[#181c27]/30 px-3 py-1 text-[#a0aed0] backdrop-blur-sm"
-        >
-          <h2 class="font-bold text-[#e0e7ff]">
-            <span class="text-[#00f0c0]">&gt;&nbsp;&nbsp;</span> How ParkTech works
-          </h2>
+        <div class="section-tag mb-6">
+          <span class="section-tag__marker">&gt;</span>
+          <span class="section-tag__text">How ParkTech works</span>
         </div>
 
         <div class="grid gap-5 md:grid-cols-3">
           {
             operatingCards.map((card) => (
-              <article class="relative overflow-hidden rounded-lg border border-[#3a3f5e] bg-[#181c27]/90 p-6">
+              <article class="mobile-solid-surface relative overflow-hidden rounded-lg border border-[#3a3f5e] bg-[#181c27]/90 p-6">
                 <div class="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-[#00f0c0] to-[#ff2a6d]" />
                 <p class="gradient-text text-xs font-bold">{card.marker}</p>
                 <h3 class="pt-4 text-xl font-semibold text-[#e0e7ff]">
@@ -186,10 +178,10 @@ const labItems = [
           </p>
         </div>
 
-        <div class="grid gap-3 sm:grid-cols-2">
+        <div class="grid gap-4 sm:grid-cols-2 sm:gap-3">
           {
             clientOwnedPoints.map((point) => (
-              <p class="rounded border border-[#3a3f5e]/80 bg-[#181c27]/80 p-4 text-sm font-semibold text-[#e0e7ff]">
+              <p class="mobile-solid-surface rounded border border-[#3a3f5e]/80 bg-[#181c27]/80 p-4 text-sm font-semibold text-[#e0e7ff]">
                 <span class="text-[#00f0c0]">/&nbsp;</span>
                 {point}
               </p>
@@ -238,10 +230,10 @@ const labItems = [
             and technical experiments that improve the way support is delivered.
             It is credibility for the work, not the main offer.
           </p>
-          <div class="mt-6 grid gap-3 sm:grid-cols-2">
+          <div class="mt-6 grid gap-4 sm:grid-cols-2 sm:gap-3">
             {
               labItems.map((item) => (
-                <p class="rounded border border-[#3a3f5e]/80 bg-[#0a0c12]/60 p-3 text-sm font-semibold text-[#e0e7ff]">
+                <p class="mobile-solid-surface-dark rounded border border-[#3a3f5e]/80 bg-[#0a0c12]/60 p-3 text-sm font-semibold text-[#e0e7ff]">
                   <span class="text-[#ff2a6d]">/&nbsp;</span>
                   {item}
                 </p>

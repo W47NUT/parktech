@@ -81,13 +81,9 @@
   class="relative mx-auto max-w-7xl px-4 py-16"
 >
   <div class="flex">
-    <div
-      class="mb-6 ml-auto inline-block rounded border border-[#3a3f5e]/50 bg-[#181c27]/30 px-3 py-1 text-[#a0aed0] backdrop-blur-sm"
-    >
-      <h1 class="font-bold text-[#e0e7ff]">
-        <span class="text-[#00f0c0]">&gt;&nbsp;&nbsp;</span> What ParkTech helps
-        with
-      </h1>
+    <div class="section-tag mb-6 ml-auto">
+      <span class="section-tag__marker">&gt;</span>
+      <span class="section-tag__text">What ParkTech helps with</span>
     </div>
   </div>
 
@@ -117,7 +113,7 @@
       <div class="grid gap-4 sm:grid-cols-3">
         {#each supportAreas as area}
           <div
-            class="relative overflow-hidden rounded border border-[#3a3f5e]/80 bg-[#181c27]/80 p-5 text-[#e0e7ff]"
+            class="mobile-solid-surface relative overflow-hidden rounded border border-[#3a3f5e]/80 bg-[#181c27]/80 p-5 text-[#e0e7ff]"
           >
             <div
               class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-[#00f0c0] to-[#ff2a6d]"
@@ -135,7 +131,7 @@
     <div class="grid gap-4 sm:grid-cols-2">
       {#each helpItems as item, index}
         <div
-          class="relative min-h-28 overflow-hidden rounded border border-[#3a3f5e]/80 bg-[#181c27]/80 p-4 text-[#e0e7ff] backdrop-blur-sm sm:last:col-span-2"
+          class="mobile-solid-surface relative min-h-28 overflow-hidden rounded border border-[#3a3f5e]/80 bg-[#181c27]/80 p-4 text-[#e0e7ff] backdrop-blur-sm sm:last:col-span-2"
         >
           <div
             class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-[#00f0c0] to-[#ff2a6d]"
@@ -154,12 +150,9 @@
 </section>
 
 <section id="how-support-works" class="relative mx-auto max-w-7xl px-4 py-16">
-  <div
-    class="mb-6 inline-block rounded border border-[#3a3f5e]/50 bg-[#181c27]/30 px-3 py-1 text-[#a0aed0] backdrop-blur-sm"
-  >
-    <h1 class="font-bold text-[#e0e7ff]">
-      <span class="text-[#00f0c0]">&gt;&nbsp;&nbsp;</span> How support works
-    </h1>
+  <div class="section-tag mb-6">
+    <span class="section-tag__marker">&gt;</span>
+    <span class="section-tag__text">How support works</span>
   </div>
 
   <div
@@ -173,7 +166,7 @@
     </h2>
     <div class="mt-8 grid gap-4 md:grid-cols-5">
       {#each workingSteps as step}
-        <div class="rounded border border-[#3a3f5e]/80 bg-[#0a0c12]/60 p-4">
+        <div class="mobile-solid-surface-dark rounded border border-[#3a3f5e]/80 bg-[#0a0c12]/60 p-4">
           <p class="gradient-text text-sm font-bold">{step.step}</p>
           <h3 class="pt-3 font-semibold text-[#e0e7ff]">{step.title}</h3>
           <p class="pt-3 text-sm text-[#a0aed0]">{step.body}</p>
