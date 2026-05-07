@@ -9,16 +9,15 @@ body {
 }
 
 .cyber-grid {
-  background-image: linear-gradient(
-      rgba(0, 240, 192, 0.05) 1px,
-      transparent 1px
-    ),
+  background-image:
+    linear-gradient(rgba(0, 240, 192, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 240, 192, 0.05) 1px, transparent 1px);
   background-size: 30px 30px;
 }
 .cyber-glitch {
   position: relative;
   display: inline-block;
+  isolation: isolate;
 }
 .cyber-glitch::before {
   content: attr(data-text);
@@ -30,6 +29,7 @@ body {
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
   animation: glitch-anim 2s infinite linear alternate-reverse;
+  pointer-events: none;
 }
 @keyframes glitch-anim {
   0% {
@@ -49,6 +49,23 @@ body {
   }
   100% {
     clip: rect(0, 0, 0, 0);
+  }
+}
+@media (max-width: 767px) {
+  .cyber-glitch {
+    display: inline;
+  }
+
+  .cyber-glitch::before {
+    content: none;
+    animation: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cyber-glitch::before,
+  .scanline {
+    animation: none;
   }
 }
 .scanline {
