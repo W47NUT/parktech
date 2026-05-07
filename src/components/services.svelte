@@ -110,10 +110,10 @@
         </p>
       </div>
 
-      <div class="grid gap-4 sm:grid-cols-3">
+      <div class="grid auto-rows-fr gap-4 sm:grid-cols-3">
         {#each supportAreas as area}
           <div
-            class="mobile-solid-surface relative overflow-hidden rounded border border-[#3a3f5e]/80 bg-[#181c27]/80 p-5 text-[#e0e7ff]"
+            class="mobile-solid-surface relative h-full overflow-hidden rounded border border-[#3a3f5e]/80 bg-[#181c27]/80 p-5 text-[#e0e7ff]"
           >
             <div
               class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-[#00f0c0] to-[#ff2a6d]"
@@ -128,10 +128,10 @@
       </div>
     </div>
 
-    <div class="grid gap-4 sm:grid-cols-2">
+    <div class="grid auto-rows-fr gap-4 sm:grid-cols-2">
       {#each helpItems as item, index}
         <div
-          class="mobile-solid-surface relative min-h-28 overflow-hidden rounded border border-[#3a3f5e]/80 bg-[#181c27]/80 p-4 text-[#e0e7ff] backdrop-blur-sm sm:last:col-span-2"
+          class="mobile-solid-surface relative flex h-full min-h-28 flex-col overflow-hidden rounded border border-[#3a3f5e]/80 bg-[#181c27]/80 p-4 text-[#e0e7ff] backdrop-blur-sm sm:last:col-span-2"
         >
           <div
             class="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-[#00f0c0] to-[#ff2a6d]"
@@ -142,7 +142,9 @@
           <p class="gradient-text pl-3 text-xs font-bold">
             {String(index + 1).padStart(2, "0")}
           </p>
-          <p class="pt-3 pl-3 font-semibold">{item}</p>
+          <p class="mt-3 flex flex-1 items-center pl-3 leading-snug font-semibold">
+            {item}
+          </p>
         </div>
       {/each}
     </div>
@@ -164,9 +166,11 @@
     <h2 class="text-2xl font-semibold text-[#00f0c0]">
       A simple process built around clarity.
     </h2>
-    <div class="mt-8 grid gap-4 md:grid-cols-5">
+    <div class="mt-8 grid auto-rows-fr gap-4 md:grid-cols-5">
       {#each workingSteps as step}
-        <div class="mobile-solid-surface-dark rounded border border-[#3a3f5e]/80 bg-[#0a0c12]/60 p-4">
+        <div
+          class="mobile-solid-surface-dark h-full rounded border border-[#3a3f5e]/80 bg-[#0a0c12]/60 p-4"
+        >
           <p class="gradient-text text-sm font-bold">{step.step}</p>
           <h3 class="pt-3 font-semibold text-[#e0e7ff]">{step.title}</h3>
           <p class="pt-3 text-sm text-[#a0aed0]">{step.body}</p>
