@@ -41,6 +41,29 @@ The site should not feel:
 - Overbuilt
 - Stock-photo heavy
 
+## Visual Identity Preservation
+
+The existing ParkTech site has a dark technical/cyber visual identity that should be preserved unless explicitly instructed otherwise.
+
+Preserve the general feel of:
+
+- Dark mode
+- Cyber/grid background
+- Particle effects
+- Neon teal and pink accents
+- Glitch-style headline treatment where appropriate
+- Technical but polished visual tone
+- Park Technologies logo treatment
+- Existing component-based Astro/Svelte structure
+
+Do not redesign the site into a light corporate layout.
+
+Do not remove the visual identity just because the business positioning is becoming more practical.
+
+The primary rewrite goal is to replace misleading content and restructure the pages while keeping the recognizable ParkTech aesthetic.
+
+The problem with the current site is not the dark cyber style itself. The problem is the overclaimed MSP/cybersecurity/compliance language.
+
 ## Navigation Direction
 
 Target navigation:
